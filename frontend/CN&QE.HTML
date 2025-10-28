@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complex Numbers & Quadratic Equations – Mission</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #0b0d22 20%, #000 80%);
+      color: white;
+      font-family: 'Press Start 2P', monospace;
+    }
+    #dialogue-box {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      background: rgba(0,0,0,0.7);
+      border: 2px solid #0ff;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 14px;
+      line-height: 1.4;
+      display: none;
+    }
+    #progress-bar {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 12px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 6px;
+      overflow: hidden;
+      display: none;
+    }
+    #progress-inner {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #00ffff, #ff00ff);
+      transition: width 0.3s;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="1280" height="720"></canvas>
+  <div id="dialogue-box"></div>
+  <div id="progress-bar"><div id="progress-inner"></div></div>
+
+  <script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const dialogueBox = document.getElementById('dialogue-box');
+    const progressBar = document.getElementById('progress-bar');
+    const progressInner = document.getElementById('progress-inner');
+
+    // Scene states
+    let state = "dialogue"; // "dialogue" -> "exploration" -> "complete"
+
+    // Dialogue sequence
+    const dialogues = [
+      "Dr. Neutron: Ah, the Complex Numbers quadrant… I can feel the charged ions already.",
+      "Dr. Neutron: We’ll need to navigate through these floating asteroids of imaginary and real debris!",
+      "Dr. Neutron: Let’s mount Rayquaza — my trusty space serpent — and explore!",
+      "Press SPACE to begin your mission!"
+    ];
+
+    let currentDialogue = 0;
+    let displayedText = "";
+    let dialogueCharIndex = 0;
+    let typing = false;
+
+    function showDialogueBox(text) {
+      dialogueBox.style.display = "block";
+      typing = true;
+      displayedText = "";
+      dialogueCharIndex = 0;
+      typeWriter(text);
+    }
+
+    function typeWriter(text) {
+      if (dialogueCharIndex < text.length) {
+        displayedText += text.charAt(dialogueCharIndex);
+        dialogueBox.textContent = displayedText;
+        dialogueCharIndex++;
+        setTimeout(() => typeWriter(text), 35);
+      } else {
+        typing = false;
+      }
+    }
+
+    function nextDialogue() {
+      if (typing) return;
+      if (currentDialogue < dialogues.length) {
+        showDialogueBox(dialogues[currentDialogue]);
+        currentDialogue++;
+      } else {
+        // Transition to exploration
+        dialogueBox.style.display = "none";
+        startExploration();
+      }
+    }
+
+    // --- Exploration scene ---
+    let player = { x: 640, y: 360, size: 40, speed: 4 };
+    let keys = {};
+    let asteroids = [];
+    let progress = 0;
+
+    function startExploration() {
+      state = "exploration";
+      progressBar.style.display = "block";
+
+      // Generate asteroids (subtopics)
+      const subtopics = [
+        "Complex Basics",
+        "Roots & Conjugates",
+        "Quadratic Formula",
+        "Parametric Conditions",
+        "Graphical Roots",
+        "JEE PYQs"
+      ];
+      for (let i = 0; i < subtopics.length; i++) {
+        asteroids.push({
+          label: subtopics[i],
+          x: Math.random() * (canvas.width - 200) + 100,
+          y: Math.random() * (canvas.height - 200) + 100,
+          radius: 30 + Math.random() * 20,
+          hit: false
+        });
+      }
+      requestAnimationFrame(gameLoop);
+    }
+
+    function update() {
+      if (keys['ArrowUp']) player.y -= player.speed;
+      if (keys['ArrowDown']) player.y += player.speed;
+      if (keys['ArrowLeft']) player.x -= player.speed;
+      if (keys['ArrowRight']) player.x += player.speed;
+
+      // Boundaries
+      player.x = Math.max(20, Math.min(canvas.width - 20, player.x));
+      player.y = Math.max(20, Math.min(canvas.height - 20, player.y));
+
+      // Collision detection
+      asteroids.forEach(a => {
+        const dx = player.x - a.x;
+        const dy = player.y - a.y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < a.radius + player.size / 2 && !a.hit) {
+          a.hit = true;
+          progress += (100 / asteroids.length);
+          progressInner.style.width = progress + "%";
+          if (progress >= 100) finishMission();
+        }
+      });
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "black";
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+
+      // Stars background
+      for(let i=0;i<100;i++){
+        ctx.fillStyle = "white";
+        ctx.fillRect(Math.random()*canvas.width, Math.random()*canvas.height, 1, 1);
+      }
+
+      // Asteroids
+      asteroids.forEach(a => {
+        ctx.beginPath();
+        ctx.arc(a.x, a.y, a.radius, 0, Math.PI*2);
+        ctx.fillStyle = a.hit ? "rgba(0,255,0,0.4)" : "gray";
+        ctx.fill();
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+        ctx.fillStyle = "white";
+        ctx.font = "10px monospace";
+        ctx.textAlign = "center";
+        ctx.fillText(a.label, a.x, a.y - a.radius - 8);
+      });
+
+      // Player (Rayquaza placeholder)
+      ctx.beginPath();
+      ctx.arc(player.x, player.y, player.size / 2, 0, Math.PI * 2);
+      ctx.fillStyle = "#00ffcc";
+      ctx.fill();
+      ctx.strokeStyle = "#fff";
+      ctx.stroke();
+      ctx.font = "10px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("Dr N", player.x, player.y - 25);
+    }
+
+    function gameLoop() {
+      if (state !== "exploration") return;
+      update();
+      draw();
+      requestAnimationFrame(gameLoop);
+    }
+
+    function finishMission() {
+      state = "complete";
+      progressInner.style.width = "100%";
+      dialogueBox.style.display = "block";
+      dialogueBox.textContent = "🎉 Mission Complete! Badge Unlocked: 'Quadratic Voyager'";
+    }
+
+    // Input
+    window.addEventListener('keydown', (e) => {
+      if (state === "dialogue" && e.code === "Space") nextDialogue();
+      if (state === "exploration") keys[e.key] = true;
+    });
+    window.addEventListener('keyup', (e) => {
+      if (state === "exploration") keys[e.key] = false;
+    });
+
+    // Start
+    nextDialogue();
+  </script>
+</body>
+</html>
+
+</body>
+</html>
