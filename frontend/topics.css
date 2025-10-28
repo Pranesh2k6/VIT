@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at center, #05011a 0%, #020010 100%);
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('https://i.imgur.com/Y8sQJbk.png');
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+.topics-container {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.back-link {
+  color: #a2a8ff;
+  text-decoration: none;
+  font-weight: 500;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+}
+
+.chapter-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.chapter-header p {
+  color: #9ba3c0;
+  font-size: 1rem;
+}
+
+.highlight {
+  color: #00ffff;
+  font-weight: 600;
+}
+
+.topics-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.topic-card {
+  background: rgba(20, 20, 45, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  width: 280px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.planet {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #00aaff, #003366);
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.4);
+}
+
+.planet.green {
+  background: linear-gradient(135deg, #00ffcc, #00775a);
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.4);
+}
+
+.planet.yellow {
+  background: linear-gradient(135deg, #ffb700, #996600);
+  box-shadow: 0 0 40px rgba(255, 200, 0, 0.4);
+}
+
+.planet.red {
+  background: linear-gradient(135deg, #ff0044, #660022);
+  box-shadow: 0 0 40px rgba(255, 50, 50, 0.4);
+}
+
+.progress-bar {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: #00ffff;
+  border-radius: 10px;
+}
+
+.status {
+  font-size: 0.9rem;
+  color: #a0a8ff;
+}
+
+.score {
+  font-size: 0.85rem;
+  color: #9fc0ff;
+}
+
+.xp {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #ffd700;
+}
+
+.action-btn {
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #7f5eff, #00ffff);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.action-btn:hover {
+  opacity: 0.85;
+}

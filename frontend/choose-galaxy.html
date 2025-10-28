@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Your Galaxy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="choose-galaxy.css">
+</head>
+<body>
+  <div class="galaxy-container">
+    <h1 class="title">Choose Your Galaxy</h1>
+    <p class="subtitle">Select a realm to begin your cosmic journey</p>
+
+    <div class="card-wrapper">
+      <!-- Physics Card -->
+      <div class="galaxy-card physics">
+        <h2>Physics</h2>
+        <p>Explore the universe and its mysteries.</p>
+        <button class="enter-btn" onclick="selectGalaxy('Physics')">Enter Galaxy</button>
+      </div>
+
+      <!-- Chemistry Card -->
+      <div class="galaxy-card chemistry">
+        <h2>Chemistry</h2>
+        <p>Discover reactions that shape the cosmos.</p>
+        <button class="enter-btn" onclick="selectGalaxy('Chemistry')">Enter Galaxy</button>
+      </div>
+
+      <!-- Maths Card -->
+      <div class="galaxy-card maths">
+        <h2>Maths</h2>
+        <p>Decode the language of the universe.</p>
+        <button class="enter-btn" onclick="selectGalaxy('Maths')">Enter Galaxy</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectGalaxy(subject) {
+      // Store the chosen subject in browser storage
+      localStorage.setItem("selectedSubject", subject);
+
+      // Redirect to the dashboard page
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>

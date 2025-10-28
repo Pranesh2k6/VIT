@@ -1,0 +1,36 @@
+body {
+  background: radial-gradient(circle at 20% 20%, #0b132b, #1c2541, #3a506b);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.subject-container {
+  padding: 3rem 1rem;
+}
+
+.chapter-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.chapter-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  padding: 1.5rem 2rem;
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chapter-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #38bdf8;
+}

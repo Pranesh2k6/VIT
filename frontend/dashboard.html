@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clario | Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="subject-container">
+    <h1 id="subject-title"></h1>
+    <div id="chapters-container" class="chapter-grid"></div>
+  </div>
+
+  <script>
+    const chapters = {
+      Physics: [
+        "Kinematics", "Laws of Motion", "Work, Power & Energy", "Gravitation", "Optics"
+      ],
+      Chemistry: [
+        "Atomic Structure", "Periodic Table", "Chemical Bonding", "Thermodynamics", "Equilibrium"
+      ],
+      Maths: [
+        "Relations & Functions", "Calculus", "Vectors", "Matrices", "Probability"
+      ]
+    };
+
+    const subject = localStorage.getItem("selectedSubject");
+    const subjectTitle = document.getElementById("subject-title");
+    const chaptersContainer = document.getElementById("chapters-container");
+
+    if (subject) {
+      subjectTitle.textContent = `${subject} Galaxy`;
+      chapters[subject].forEach(ch => {
+        const card = document.createElement("div");
+        card.className = "chapter-card";
+        card.innerHTML = `<h3>${ch}</h3>`;
+        chaptersContainer.appendChild(card);
+      });
+    } else {
+      subjectTitle.textContent = "Galaxy Not Found 🌌";
+    }
+  </script>
+</body>
+</html>

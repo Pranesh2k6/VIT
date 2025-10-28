@@ -1,0 +1,118 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #0a0122, #240046, #3c096c);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== STAR TEXTURE ===== */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png"),
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.08), transparent 70%);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* ===== CONTAINER ===== */
+.galaxy-container {
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.title {
+  font-size: 2.3rem;
+  color: #bceaff;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #9ae7ff;
+  margin-bottom: 3rem;
+}
+
+/* ===== CARD WRAPPER ===== */
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ===== GALAXY CARD ===== */
+.galaxy-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.galaxy-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+}
+
+/* Individual Galaxy Colors */
+.physics {
+  border-top: 4px solid #00b4d8;
+}
+
+.chemistry {
+  border-top: 4px solid #80ffdb;
+}
+
+.maths {
+  border-top: 4px solid #c77dff;
+}
+
+/* ===== CARD CONTENT ===== */
+.galaxy-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.galaxy-card p {
+  font-size: 0.95rem;
+  color: #a2d2ff;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== BUTTON ===== */
+.enter-btn {
+  background: linear-gradient(90deg, #00b4d8, #7b2cbf);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.enter-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}

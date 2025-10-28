@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #190b3c, #0a001a);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.chapter-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #b8e2ff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #9ea7ff;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+.back-btn {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  color: #9eeaff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  text-shadow: 0 0 10px #9eeaff;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.chapter-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  width: 270px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(145, 71, 255, 0.4);
+  border-color: rgba(145, 71, 255, 0.6);
+}
+
+.chapter-card h2 {
+  color: #b6d7ff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.chapter-card p {
+  color: #c6c9ff;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.enter-btn {
+  background: linear-gradient(90deg, #00f0ff, #8a2fff);
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(138, 47, 255, 0.8);
+}
