@@ -1,45 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clario | Dashboard</title>
-  <link rel="stylesheet" href="dashboard.css">
-</head>
-<body>
-  <div class="subject-container">
-    <h1 id="subject-title"></h1>
-    <div id="chapters-container" class="chapter-grid"></div>
-  </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<body>
+  <!-- HEADER / TOP BAR -->
+  <header class="header">
+    <div class="header-left">
+      <div class="avatar">JA</div>
+      <div class="user-block">
+        <div class="username">jawaharvb</div>
+        <div class="subject-select">
+          <label for="subjectSelect" class="sr-only">Subject</label>
+          <select id="subjectSelect" aria-label="Select subject">
+            <option value="Mathematics">Mathematics Galaxy</option>
+            <option value="Physics">Physics Galaxy</option>
+            <option value="Chemistry">Chemistry Galaxy</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
+    <div class="header-right">
+      <a href="achievements.html" class="btn small">🏆 Achievements</a>
+      <a href="profile.html" class="xp-badge">🚀 Explorer <span class="xp">1250 XP</span></a>
+    </div>
+  </header>
+
+  <!-- NEXT RECOMMENDED MISSION BANNER -->
+  <section class="banner" id="recommendedBanner">
+    <div class="banner-icon">!</div>
+    <div class="banner-content">
+      <strong id="recommendedTitle">Next Recommended Mission</strong>
+      <div id="recommendedDesc">Select a subject to view your recommended chapter.</div>
+    </div>
+    <div class="banner-action">
+      <button id="bookmarkRecommended" class="icon-btn" title="Bookmark">★</button>
+    </div>
+  </section>
+
+  <!-- GALAXY MAP TITLE -->
+  <main class="main-content">
+    <section class="map-heading">
+      <h1>Galaxy Map - Phase 1: Explore</h1>
+      <p class="sub">Select a Star System to begin your journey</p>
+    </section>
+
+    <!-- SYSTEM CARDS GRID -->
+    <section class="galaxy-map" id="galaxyMap">
+      <!-- cards rendered by JS -->
+    </section>
+
+    <!-- LEGEND -->
+    <section class="legend">
+      <span class="legend-item"><span class="dot low"></span> Low Mastery / Not Started</span>
+      <span class="legend-item"><span class="dot review"></span> In Progress / Needs Review</span>
+      <span class="legend-item"><span class="dot mastered"></span> Mastered</span>
+    </section>
+
+    <!-- FOOTER ACTIONS -->
+    <nav class="footer-actions">
+      <a class="pill" href="jee_full_syllabus_detailed.html">Syllabus</a>
+      <a class="pill" href="exam-tracker.html">Exam Tracker</a>
+      <a class="pill" href="leaderboard.html">Leaderboard</a>
+      <a class="pill" href="duels.html">Duels</a>
+    </nav>
+  </main>
+
+  <!-- DETAILED CHAPTER LISTS (Provided to JS) -->
   <script>
-    const chapters = {
-      Physics: [
-        "Kinematics", "Laws of Motion", "Work, Power & Energy", "Gravitation", "Optics"
+    // Comprehensive JEE chapter lists (major topics / chapters).
+    // These arrays are used to render the cards for each subject.
+    const syllabus = {
+      "Mathematics": [
+        "Sets, Relations & Functions",
+        "Complex Numbers & Quadratic Equations",
+        "Matrices & Determinants",
+        "Permutations & Combinations",
+        "Binomial Theorem & Mathematical Induction",
+        "Sequences & Series (Arithmetic/Geometric)",
+        "Limits, Continuity & Differentiability",
+        "Differentiation: Techniques & Applications",
+        "Applications of Derivatives",
+        "Integrals: Indefinite & Definite",
+        "Applications of Integrals",
+        "Differential Equations",
+        "Vectors & 3D Geometry",
+        "Coordinate Geometry: Straight Lines",
+        "Coordinate Geometry: Circles",
+        "Coordinate Geometry: Conic Sections (Parabola, Ellipse, Hyperbola)",
+        "Probability",
+        "Statistics (Basic)",
+        "Trigonometry (Identities & Equations)",
+        "Mathematical Reasoning",
+        "Functions & Graphs (including Inverse Functions)"
       ],
-      Chemistry: [
-        "Atomic Structure", "Periodic Table", "Chemical Bonding", "Thermodynamics", "Equilibrium"
+
+      "Physics": [
+        "Units, Dimensions & Measurement",
+        "Kinematics in One & Two Dimensions",
+        "Laws of Motion",
+        "Work, Energy & Power",
+        "Systems of Particles & Centre of Mass",
+        "Rotational Motion & Moment of Inertia",
+        "Gravitation",
+        "Elasticity & Oscillations (SHM)",
+        "Waves (Mechanical Waves & Sound)",
+        "Fluid Mechanics",
+        "Thermodynamics & Kinetic Theory",
+        "Heat Transfer",
+        "Electrostatics",
+        "Capacitance",
+        "Current Electricity",
+        "Magnetic Effects of Current and Magnetism",
+        "Electromagnetic Induction & Alternating Current",
+        "Electromagnetic Waves",
+        "Ray Optics & Optical Instruments",
+        "Wave Optics",
+        "Dual Nature of Matter & Radiation (Photoelectric Effect)",
+        "Atoms & Nuclei (including Radioactivity)",
+        "Semiconductor Devices & Electronics",
+        "Communication Systems (basic)"
       ],
-      Maths: [
-        "Relations & Functions", "Calculus", "Vectors", "Matrices", "Probability"
+
+      "Chemistry": [
+        // Physical Chemistry
+        "Some Basic Concepts in Chemistry",
+        "Atomic Structure",
+        "Chemical Bonding & Molecular Structure",
+        "States of Matter",
+        "Thermodynamics (Chemical)",
+        "Equilibrium (Chemical & Ionic)",
+        "Ionic Equilibrium & pH",
+        "Chemical Kinetics",
+        "Surface Chemistry",
+        "Electrochemistry",
+        "Solutions & Colligative Properties",
+        // Inorganic Chemistry
+        "Periodic Classification of Elements",
+        "Periodic Properties (Trends)",
+        "s-Block Elements (Alkali & Alkaline Earth Metals)",
+        "p-Block Elements (Group-wise chemistry)",
+        "d & f Block Elements (Transition Metals & Properties)",
+        "Coordination Compounds",
+        "Metallurgy (overview)",
+        "Qualitative Analysis (Basics)",
+        // Organic Chemistry
+        "Basic Principles of Organic Chemistry",
+        "Hydrocarbons: Alkanes, Alkenes, Alkynes, Arenes",
+        "Alkyl Halides (Haloalkanes) & Haloarenes",
+        "Alcohols, Phenols & Ethers",
+        "Aldehydes, Ketones & Carboxylic Acids",
+        "Amines",
+        "Biomolecules (Carbohydrates, Proteins, Amino Acids)",
+        "Polymers",
+        "Chemistry in Everyday Life",
+        "Practical & Laboratory Techniques (overview)"
       ]
     };
 
-    const subject = localStorage.getItem("selectedSubject");
-    const subjectTitle = document.getElementById("subject-title");
-    const chaptersContainer = document.getElementById("chapters-container");
+    // Some chapters may initially be locked or unlocked. We'll mark first few as unlocked.
+    const unlockedCounts = {
+      "Mathematics": 8,  // initial unlocked chapters visible as active
+      "Physics": 8,
+      "Chemistry": 8
+    };
 
-    if (subject) {
-      subjectTitle.textContent = `${subject} Galaxy`;
-      chapters[subject].forEach(ch => {
-        const card = document.createElement("div");
-        card.className = "chapter-card";
-        card.innerHTML = `<h3>${ch}</h3>`;
-        chaptersContainer.appendChild(card);
+    // Next recommended chapter (just a simple pick; could be dynamic from server)
+    const recommended = {
+      "Mathematics": "Sequences & Series (Arithmetic/Geometric)",
+      "Physics": "Work, Energy & Power",
+      "Chemistry": "Atomic Structure"
+    };
+
+    // Render function: creates system cards
+    function renderGalaxy(subject) {
+      const container = document.getElementById('galaxyMap');
+      container.innerHTML = ''; // clear old
+
+      // Update recommended banner
+      document.getElementById('recommendedTitle').textContent = "Next Recommended Mission";
+      document.getElementById('recommendedDesc').textContent =
+        `Continue your progress on ${recommended[subject]} in the ${subject} Galaxy. Click Explore to begin.`;
+
+      const chapters = syllabus[subject] || [];
+      const unlocked = unlockedCounts[subject] || 5;
+
+      chapters.forEach((chapter, i) => {
+        // create card
+        const card = document.createElement('article');
+        card.className = 'system-card';
+        if (i < unlocked) card.classList.add('unlocked');
+        else card.classList.add('locked');
+
+        // create inner content
+        card.innerHTML = `
+          <div class="system-visual">
+            <div class="planet-illustration" aria-hidden="true"></div>
+            ${i === 0 ? '<span class="badge recommended">Recommended</span>' : ''}
+            ${i >= unlocked ? '<div class="locked-overlay">🔒 Locked</div>' : ''}
+          </div>
+
+          <div class="system-body">
+            <h4 class="system-title">${chapter}</h4>
+            <div class="system-meta">
+              <span class="planet-count">${Math.max(1, Math.round(Math.random()*4))} Planets</span>
+              <span class="mastery">Overall Mastery <strong class="percent">${Math.round(Math.random()*80)}%</strong></span>
+            </div>
+
+            <div class="system-progress">
+              <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress-fill" style="width: ${Math.round(Math.random()*70)}%"></div>
+              </div>
+            </div>
+
+            <div class="system-actions">
+              <button class="explore-btn" ${i >= unlocked ? 'disabled' : ''}
+                onclick="location.href='chapter.html?subject=${encodeURIComponent(subject)}&chapter=${encodeURIComponent(chapter)}'">
+                Explore
+              </button>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
       });
-    } else {
-      subjectTitle.textContent = "Galaxy Not Found 🌌";
     }
+
+    // Initialize with default subject selection
+    const selectEl = document.getElementById('subjectSelect');
+    function init() {
+      renderGalaxy(selectEl.value);
+      // listen for subject changes
+      selectEl.addEventListener('change', (e) => {
+        renderGalaxy(e.target.value);
+      });
+      // small accessibility: allow banner bookmark
+      document.getElementById('bookmarkRecommended').addEventListener('click', () => {
+        alert('Recommended mission bookmarked!');
+      });
+    }
+    init();
   </script>
+
+  <!-- Accessibility helpers & minimal inline styling notes (your CSS will override) -->
+  <style>
+    /* NOTE: these minimal rules are only structural fallbacks.
+       Your existing style.css will (should) provide the final visuals. */
+    .header { display:flex; justify-content:space-between; align-items:center; padding:16px 28px; }
+    .header-left { display:flex; gap:12px; align-items:center; }
+    .avatar { width:48px;height:48px;border-radius:50%; background:linear-gradient(#6f9,#69f); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; }
+    .user-block .username { font-weight:600; color:#fff; }
+    #subjectSelect { background:rgba(255,255,255,0.06); color:#fff; border-radius:10px; padding:6px 10px; }
+    .banner { display:flex; align-items:center; gap:16px; margin:24px; padding:18px; border-radius:14px; border:1px solid rgba(255,200,80,0.12); background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06)); }
+    .main-content { padding: 20px 40px 80px; }
+    .map-heading { text-align:center; color:#fff; margin-bottom:26px; }
+    .galaxy-map { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:24px; }
+    .system-card { background:rgba(10,10,20,0.55); border-radius:14px; padding:18px; border:1px solid rgba(255,255,255,0.03); color:#fff; position:relative; overflow:hidden; min-height:260px; }
+    .system-card.unlocked { box-shadow: 0 8px 24px rgba(0,150,200,0.05); border-color: rgba(0,200,220,0.12); }
+    .system-card.locked { opacity:0.42; filter:grayscale(20%); }
+    .system-visual { height:140px; display:flex; align-items:center; justify-content:center; position:relative; }
+    .planet-illustration { width:140px; height:140px; border-radius:50%; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.06), rgba(0,0,0,0.3)); box-shadow: inset 0 0 40px rgba(0,0,0,0.7); }
+    .badge.recommended { position:absolute; top:12px; right:12px; background:#ffd966; color:#2a2a2a; padding:8px 12px; border-radius:20px; font-weight:600; }
+    .locked-overlay { position:absolute; top:44px; right:20px; color:#ffd; font-weight:700; background:rgba(0,0,0,0.25); padding:8px 12px; border-radius:10px; }
+    .system-title { margin:8px 0 6px; font-size:1.15rem; }
+    .system-meta { display:flex; justify-content:space-between; color:#cbd5e1; font-size:0.95rem; margin-bottom:12px; }
+    .progress-bar { background:rgba(255,255,255,0.06); height:10px; border-radius:999px; overflow:hidden; }
+    .progress-fill { height:100%; background:linear-gradient(90deg,#7ef8fa,#b993ff); width:30%; }
+    .explore-btn { padding:10px 18px; border-radius:999px; border:none; cursor:pointer; background:linear-gradient(90deg,#9b7bff,#53e5ff); color:#072; font-weight:700; }
+    .explore-btn[disabled] { opacity:0.35; cursor:not-allowed; }
+    .legend { display:flex; gap:20px; justify-content:center; margin-top:20px; color:#fff; }
+    .legend .dot { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+    .dot.low { background:#ff4d4f; }
+    .dot.review { background:#f5b041; }
+    .dot.mastered { background:#48d38a; }
+    .footer-actions { display:flex; gap:14px; justify-content:flex-start; margin:36px 0 80px; padding-left:28px; }
+    .pill { background:rgba(255,255,255,0.06); padding:10px 14px; border-radius:12px; color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,0.04); }
+    /* small screen friendly */
+    @media (max-width:880px) {
+      .galaxy-map { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+      .header { padding:12px; }
+    }
+  </style>
+</body>
+, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
 </body>
 </html>
