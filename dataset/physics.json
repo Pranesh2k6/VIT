@@ -1,0 +1,664 @@
+[
+    {
+      "q_id": 1,
+      "text": "A force $f=x^{2}y\\hat{i}+y^{2}\\hat{j}$ acts on a particle in a plane $x+y=10$. The work done by this force during a displacement from (0,0) to (4 m, 2 m) is ______ Joule (round off to the nearest integer)",
+      "type": "SA",
+      "answer": "152",
+      "elo": 1650,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 2,
+      "text": "In a hydraulic lift, the surface area of the input piston is $6~cm^{2}$ and that of the output piston is $1500~cm^{2}$. If 100 N force is applied to the input piston to raise the output piston by 20 cm, then the work done is ______ kJ.",
+      "type": "SA",
+      "answer": "5",
+      "elo": 1250,
+      "topic": ["Work, Energy, and Power", "Fluid Mechanics"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 3,
+      "text": "A force $\\vec{F}=2\\hat{i}+b\\hat{j}+\\hat{k}$ is applied on a particle and it undergoes a displacement $\\hat{i}-2\\hat{j}-\\hat{k}$. What will be the value of b, if work done on the particle is zero.",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{1}{3}$",
+        "B": "$\\frac{1}{2}$",
+        "C": "0",
+        "D": "2"
+      },
+      "answer": "B",
+      "elo": 1050,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 4,
+      "text": "A ball having kinetic energy KE, is projected at an angle of 60° from the horizontal. What will be the kinetic energy of ball at the highest point of its flight?",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{(KE)}{2}$",
+        "B": "$\\frac{(KE)}{8}$",
+        "C": "$\\frac{(KE)}{4}$",
+        "D": "$\\frac{(KE)}{16}$"
+      },
+      "answer": "C",
+      "elo": 1080,
+      "topic": ["Work, Energy, and Power", "Projectile Motion"],
+      "subject": "Physics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 5,
+      "text": "A force $F=\\alpha+\\beta x^{2}$ acts on an object in the x-direction. The work done by the force is 5 J when the object is displaced by 1 m. If the constant $\\alpha=1$ N then $\\beta$ will be",
+      "type": "MCQ",
+      "options": {
+        "A": "15 $N/m^{2}$",
+        "B": "10 $N/m^{2}$",
+        "C": "12 $N/m^{2}$",
+        "D": "8 $N/m^{2}$"
+      },
+      "answer": "C",
+      "elo": 1200,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 6,
+      "text": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R\nAssertion A: In a central force field, the work done is independent of the path chosen.\nReason R: Every force encountered in mechanics does not have an associated potential energy.\nIn the light of the above statements, choose the most appropriate answer from the options given below",
+      "type": "MCQ",
+      "options": {
+        "A": "A is false but R is true",
+        "B": "Both A and R. are true but R is NOT the correct explanation of A",
+        "C": "A is true but R is false",
+        "D": "Both A and R are true and R is the correct explanation of A"
+      },
+      "answer": "B",
+      "elo": 1300,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 7,
+      "text": "A bead of mass 'm' slides without friction on the wall of a vertical circular hoop of radius 'R'. The bead moves under the combined action of gravity and a massless spring (k) attached to the bottom of the hoop. The equilibrium length of the spring is '$R$'. If the bead is released from top of the hoop with (negligible) zero initial speed, velocity of bead, when the length of spring becomes '$R$', would be",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\sqrt{2Rg+\\frac{kR^{2}}{m}}$",
+        "B": "$\\sqrt{3Rg+\\frac{kR^{2}}{m}}$",
+        "C": "$\\sqrt{2Rg+\\frac{4kR^{2}}{m}}$",
+        "D": "$2\\sqrt{gR+\\frac{kR^{2}}{m}}$"
+      },
+      "answer": "B",
+      "elo": 1680,
+      "topic": ["Work, Energy, and Power", "Circular Motion"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 8,
+      "text": "A body of mass 4 kg is placed on a plane at a point P having coordinate (3, 4)m. Under the action of force $\\vec{F}=(2\\hat{i}+3\\hat{j})N$, it moves to a new point Q having coordinates (6, 10)m in 4 sec. The average power and instanteous power at the end of 4 sec are in the ratio of:",
+      "type": "MCQ",
+      "options": {
+        "A": "4:3",
+        "B": "13:6",
+        "C": "1:2",
+        "D": "6:13"
+      },
+      "answer": "D",
+      "elo": 1500,
+      "topic": ["Work, Energy, and Power", "Kinematics"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 9,
+      "text": "A sand dropper drops sand of mass $m(t)$ on a conveyer belt at a rate proportional to the square root of speed (v) of the belt, i.e., $\\frac{dm}{dt}\\propto\\sqrt{v}.$ If P is the power delivered to run the belt at constant speed then which of the following relationship is true?",
+      "type": "MCQ",
+      "options": {
+        "A": "$P\\propto\\sqrt{v}$",
+        "B": "$P\\propto v$",
+        "C": "$P^{2}\\propto v^{3}$",
+        "D": "$P^{2}\\propto v^{5}$"
+      },
+      "answer": "D",
+      "elo": 1700,
+      "topic": ["Work, Energy, and Power", "Variable Mass Systems"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 10,
+      "text": "A block of mass 25 kg is pulled along a horizontal surface by a force at an angle 45° with the horizontal. The friction coefficient between the block and the surface is 0.25. The block travels at a uniform velocity. The work done by the applied force during a displacement of 5 m of the block is :",
+      "type": "MCQ",
+      "options": {
+        "A": "490 J",
+        "B": "970 J",
+        "C": "735 J",
+        "D": "245 J"
+      },
+      "answer": "D",
+      "elo": 1320,
+      "topic": ["Work, Energy, and Power", "Newton's Laws of Motion"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 11,
+      "text": "An object of mass 1000 g experiences a time dependent force $\\vec{F}=(2t\\hat{i}+3t^{2}\\hat{j})N.$ The power generated by the force at time t is:",
+      "type": "MCQ",
+      "options": {
+        "A": "$(2t^{2}+18t^{3})W$",
+        "B": "$(3t^{3}+5t^{5})W$",
+        "C": "$(2t^{3}+3t^{5})W$",
+        "D": "$(2t^{2}+3t^{3})W$"
+      },
+      "answer": "C",
+      "elo": 1350,
+      "topic": ["Work, Energy, and Power", "Kinematics"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 12,
+      "text": "Which one of the following forces cannot be expressed in terms of potential energy?",
+      "type": "MCQ",
+      "options": {
+        "A": "Frictional force",
+        "B": "Coulomb's force",
+        "C": "Restoring force",
+        "D": "Gravitational force"
+      },
+      "answer": "A",
+      "elo": 1000,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 13,
+      "text": "A spherical body of mass 2 kg starting from rest acquires a kinetic energy of 10000J at the end of 5th second. The force acted on the body is ______ $N$.",
+      "type": "SA",
+      "answer": "40",
+      "elo": 1100,
+      "topic": ["Work, Energy, and Power", "Kinematics"],
+      "subject": "Physics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 14,
+      "text": "A body of mass 1 kg begins to move under the action of a time dependent force $\\vec{F}=(t\\hat{i}+3t^{2}\\hat{j})N$. The power developed by above force, at the time $t=2s$. will be ______ W.",
+      "type": "SA",
+      "answer": "100",
+      "elo": 1360,
+      "topic": ["Work, Energy, and Power", "Kinematics"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 15,
+      "text": "An object of mass 'm' initially at rest on a smooth horizontal plane starts moving under the action of force $F=2N$. In the process of its linear motion, the angle $\\theta$ between the direction of force and horizontal varies as $\\theta=kx$, where k is a constant and x is the distance covered by the object from its initial position. The expression of kinetic energy of the object will be $E=n/k \\sin\\theta$. The value of n is ______.",
+      "type": "SA",
+      "answer": "2",
+      "elo": 1520,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 16,
+      "text": "A 0.4 kg mass takes 8 s to reach ground when dropped from a certain height 'P' above surface of earth. The loss of potential energy in the last second of fall is ______ J. [Take $g=10m/s^{2}$]",
+      "type": "SA",
+      "answer": "300",
+      "elo": 1280,
+      "topic": ["Work, Energy, and Power", "Kinematics"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 17,
+      "text": "Identify the correct statements from the following:\n(A) Work done by a man in lifting a bucket out of a well by means of a rope tied to the bucket is negative.\n(B) Work done by gravitational force in lifting a bucket out of a well by a rope tied to the bucket is negative.\n(C) Work done by friction on a body sliding down an inclined plane is positive.\n(D) Work done by an applied force on a body moving on a rough horizontal plane with uniform velocity in zero.\n(E) Work done by the air resistance on an oscillating pendulum in negative.\nChoose the correct answer from the options given below:",
+      "type": "MCQ",
+      "options": {
+        "A": "B and E only",
+        "B": "A and C only",
+        "C": "B, D and E only",
+        "D": "B and D only"
+      },
+      "answer": "A",
+      "elo": 1120,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 18,
+      "text": "A body of mass 2 kg is initially at rest. It starts moving unidirectionally under the influence of a source of constant power P. Its displacement in 4 s is $\\frac{1}{3}a^{2}\\sqrt{P}m$. The value of a will be ______.",
+      "type": "SA",
+      "answer": "4",
+      "elo": 1400,
+      "topic": ["Work, Energy, and Power", "Kinematics"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 19,
+      "text": "A body of mass 1 kg collides head on elastically with a stationary body of mass 3 kg. After collision, the smaller body reverses its direction of motion and moves with a speed of 2m/s. The initial speed of the smaller body before collision is ______ $ms^{-1}$.",
+      "type": "SA",
+      "answer": "4",
+      "elo": 1300,
+      "topic": ["Momentum and Collisions"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 20,
+      "text": "A nucleus disintegrates into two smaller parts, which have their velocities in the ratio 3: 2. The ratio of their nuclear sizes will be $(\\frac{x}{3})^{\\frac{1}{3}}.$ The value of ' x' is:",
+      "type": "SA",
+      "answer": "2",
+      "elo": 1550,
+      "topic": ["Momentum and Collisions", "Nuclear Physics"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 21,
+      "text": "A ball of mass 200g rests on a vertical post of height 20m. A bullet of mass 10g, travelling in horizontal direction, hits the centre of the ball. After collision both travels independently. The ball hits the ground at a distance 30m and the bullet at a distance of 120m from the foot of the post. The value of initial velocity of the bullet will be (if $g=10m/s^{2}$) :",
+      "type": "MCQ",
+      "options": {
+        "A": "$120m/s$",
+        "B": "$60m/s$",
+        "C": "$400m/s$",
+        "D": "$360m/s$"
+      },
+      "answer": "D",
+      "elo": 1600,
+      "topic": ["Momentum and Collisions", "Projectile Motion"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 22,
+      "text": "As per the given figure, a small ball P slides down the quadrant of a circle (radius 20 cm) and hits the other ball Q of equal mass which is initially at rest. Neglecting the effect of friction and assume the collision to be elastic, the velocity of ball Q after collision will be : $(g=10m/s^{2})$",
+      "type": "MCQ",
+      "options": {
+        "A": "0",
+        "B": "$0.25m/s$",
+        "C": "$2m/s$",
+        "D": "$4m/s$"
+      },
+      "answer": "C",
+      "elo": 1310,
+      "topic": ["Momentum and Collisions", "Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 23,
+      "text": "A machine gun of mass 10 kg fires 20g bullets at the rate of 180 bullets per minute with a speed of $100m~s^{-1}$ each. The recoil velocity of the gun is :",
+      "type": "MCQ",
+      "options": {
+        "A": "$0.02m/s$",
+        "B": "$2.5m/s$",
+        "C": "$1.5m/s$",
+        "D": "$0.6m/s$"
+      },
+      "answer": "D",
+      "elo": 1340,
+      "topic": ["Momentum and Collisions"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 24,
+      "text": "100 balls each of mass m moving with speed v simultaneously strike a wall normally and reflected back with same speed, in time t s. The total force exerted by the balls on the wall is",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{100~mv}{t}$",
+        "B": "$\\frac{200~mv}{t}$",
+        "C": "200 mvt",
+        "D": "$\\frac{mv}{100t}$"
+      },
+      "answer": "B",
+      "elo": 1130,
+      "topic": ["Momentum and Collisions"],
+      "subject": "Physics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 25,
+      "text": "A solid sphere of mass 1 kg rolls without slipping on a plane surface. Its kinetic energy is $7\\times10^{-3}J$. The speed of the centre of mass of the sphere is ______ $cm~s^{-1}$.",
+      "type": "SA",
+      "answer": "10",
+      "elo": 1380,
+      "topic": ["Rotational Motion", "Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 26,
+      "text": "A block is fastened to a horizontal spring. The block is pulled to a distance $x=10$ cm from its equilibrium position (at $x=0$ ) on a frictionless surface from rest. The energy of the block at $x=5$ cm is 0.25J. The spring constant of the spring is ______ $Nm^{-1}$. (Round to nearest integer)",
+      "type": "SA",
+      "answer": "67",
+      "elo": 1390,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 27,
+      "text": "Figures (a), (b), (c) and (d) show variation of force with time. The impulse is highest in which figure?",
+      "type": "MCQ",
+      "options": {
+        "A": "Fig (c)",
+        "B": "Fig (b)",
+        "C": "Fig (a)",
+        "D": "Fig (d)"
+      },
+      "answer": "B",
+      "elo": 1220,
+      "topic": ["Momentum and Collisions"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 28,
+      "text": "A small particle of mass m moves in such a way that its potential energy $U=\\frac{1}{2}m\\omega^{2}r^{2}$ where $\\omega$ is constant and r is the distance of the particle from origin. Assuming Bohr's quantization of momentum and circular orbit, the radius of nth orbit will be proportional to,",
+      "type": "MCQ",
+      "options": {
+        "A": "n",
+        "B": "$n^{2}$",
+        "C": "$\\frac{1}{n}$",
+        "D": "$\\sqrt{n}$"
+      },
+      "answer": "D",
+      "elo": 1620,
+      "topic": ["Modern Physics", "Circular Motion"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 29,
+      "text": "A body is dropped on ground from a height ' $h_{1}$ ' and after hitting the ground, it rebounds to a height ' $h_{2}$ '. If the ratio of velocities of the body just before and after hitting ground is 4, then percentage loss in kinetic energy of the body is $\\frac{x}{4}$%. The value of x is ______.",
+      "type": "SA",
+      "answer": "375",
+      "elo": 1530,
+      "topic": ["Momentum and Collisions", "Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 30,
+      "text": "The momentum of a body is increased by 50%. The percentage increase in the kinetic energy of the body is ______ %.",
+      "type": "SA",
+      "answer": "125",
+      "elo": 1140,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 31,
+      "text": "A bullet of mass 0.1 kg moving horizontally with speed $400ms^{-1}$ hits a wooden block of mass 3.9 kg kept on a horizontal rough surface. The bullet gets embedded into the block and moves 20m before coming to rest. The coefficient of friction between the block and the surface is ______. (Given $g=10m/s^{2}$)",
+      "type": "MCQ",
+      "options": {
+        "A": "0.90",
+        "B": "0.65",
+        "C": "0.25",
+        "D": "0.50"
+      },
+      "answer": "C",
+      "elo": 1560,
+      "topic": ["Momentum and Collisions", "Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 32,
+      "text": "A body of mass 5 kg is moving with a momentum of $10~kg~ms^{-1}$. Now a force of 2N acts on the body in the direction of its motion for 5 s. The increase in the Kinetic energy of the body is ______ J.",
+      "type": "SA",
+      "answer": "30",
+      "elo": 1580,
+      "topic": ["Work, Energy, and Power", "Kinematics"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 33,
+      "text": "A hollow spherical ball of uniform density rolls up a curved surface with an initial velocity 3m/s. Maximum height with respect to the initial position covered by it will be ______ cm. (take, $g=10m/s^{2}$)",
+      "type": "SA",
+      "answer": "75",
+      "elo": 1460,
+      "topic": ["Rotational Motion", "Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 34,
+      "text": "A closed circular tube of average radius 15 cm, whose inner walls are rough, is kept in vertical plane. A block of mass 1 kg just fit inside the tube. The speed of block is $22m/s$, when it is introduced at the top of tube. After completing five oscillations, the block stops at the bottom region of tube. The work done by the tube on the block is ______ J. (Given: $g=10m/s^{2}$)",
+      "type": "SA",
+      "answer": "245",
+      "elo": 1570,
+      "topic": ["Work, Energy, and Power", "Circular Motion"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 35,
+      "text": "A force $\\vec{F}=(2+3x)\\hat{i}$ acts on a particle in the x direction where F is in newton and x is in meter. The work done by this force during a displacement from $x=0$ to $x=4m$, is ______ J.",
+      "type": "SA",
+      "answer": "32",
+      "elo": 1030,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 36,
+      "text": "A block of mass 5 kg starting from rest pulled up on a smooth incline plane making an angle of $30^{\\circ}$ with horizontal with an affective acceleration of $1ms^{-2}$. The power delivered by the pulling force at $t=10$ s from the starts is ______ W. [use $g=10ms^{-2}$]",
+      "type": "SA",
+      "answer": "300",
+      "elo": 1480,
+      "topic": ["Work, Energy, and Power", "Newton's Laws of Motion"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 37,
+      "text": "The ratio of powers of two motors is $\\frac{3\\sqrt{x}}{\\sqrt{x}+1}$, that are capable of raising 300 kg water in 5 minutes and 50 kg water in 2 minutes respectively from a well of 100m deep. The value of x will be",
+      "type": "MCQ",
+      "options": {
+        "A": "16",
+        "B": "2",
+        "C": "4",
+        "D": "2.4"
+      },
+      "answer": "A",
+      "elo": 1540,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 38,
+      "text": "A body of mass $(5\\pm0.5)$ kg is moving with a velocity of $(20\\pm0.4)m/s$. Its kinetic energy will be",
+      "type": "MCQ",
+      "options": {
+        "A": "$(1000\\pm140)J$",
+        "B": "$(500\\pm140)J$",
+        "C": "$(500\\pm0.14)J$",
+        "D": "$(1000\\pm0.14)J$"
+      },
+      "answer": "A",
+      "elo": 1490,
+      "topic": ["Work, Energy, and Power", "Units and Measurement"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 39,
+      "text": "A car accelerates from rest to u m/s. The energy spent in this process is E J. The energy required to accelerate the car from u m/s to 2u m/s is nE J. The value of n is ______.",
+      "type": "SA",
+      "answer": "3",
+      "elo": 1210,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 40,
+      "text": "A body is released from a height equal to the radius (R) of the earth. The velocity of the body when it strikes the surface of the earth will be : (Given $g=$ acceleration due to gravity on the earth.)",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\sqrt{gR}$",
+        "B": "$\\sqrt{\\frac{gR}{2}}$",
+        "C": "$\\sqrt{4gR}$",
+        "D": "$\\sqrt{2gR}$"
+      },
+      "answer": "A",
+      "elo": 1640,
+      "topic": ["Gravitation", "Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 41,
+      "text": "A particle of mass m moving with velocity v collides with a stationary particle of mass 2m. After collision, they stick together and continue to move together with velocity",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{v}{2}$",
+        "B": "$\\frac{v}{3}$",
+        "C": "$\\frac{v}{4}$",
+        "D": "v"
+      },
+      "answer": "B",
+      "elo": 1230,
+      "topic": ["Momentum and Collisions"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 42,
+      "text": "An average force of 125N is applied on a machine gun firing bullets each of mass 10g at the speed of 250m/s to keep it in position. The number of bullets fired per second by the machine gun is :",
+      "type": "MCQ",
+      "options": {
+        "A": "25",
+        "B": "5",
+        "C": "100",
+        "D": "50"
+      },
+      "answer": "D",
+      "elo": 1470,
+      "topic": ["Momentum and Collisions"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 43,
+      "text": "A nucleus disintegrates into two nuclear parts, in such a way that ratio of their nuclear sizes is $1:2^{1/3}$. Their respective speed have a ratio of n: 1. The value of n is ______.",
+      "type": "SA",
+      "answer": "2",
+      "elo": 1550,
+      "topic": ["Momentum and Collisions", "Nuclear Physics"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 44,
+      "text": "A particle experiences a variable force $\\vec{F}=(4x\\hat{i}+3y^{2}\\hat{j})$ in a horizontal x-y plane. Assume distance in meters and force is newton. If the particle moves from point (1, 2) to point (2, 3) in the x-y plane, then Kinetic Energy changes by:",
+      "type": "MCQ",
+      "options": {
+        "A": "50.0J",
+        "B": "12.5J",
+        "C": "25.0J",
+        "D": "0J"
+      },
+      "answer": "C",
+      "elo": 1260,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 45,
+      "text": "A ball of mass 100g is dropped from a height $h=10$ cm on a platform fixed at the top of a vertical spring. The ball stays on the platform and the platform is depressed by a distance $\\frac{h}{2}$. The spring constant is ______ $Nm^{-1}$. (Use $g=10ms^{-2}$)",
+      "type": "SA",
+      "answer": "120",
+      "elo": 1460,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 46,
+      "text": "Potential energy as a function of r is given by $U=\\frac{A}{r^{10}}-\\frac{B}{r^{5}}$; where r is the interatomic distance, A and B are positive constants. The equilibrium distance between the two atoms will be :",
+      "type": "MCQ",
+      "options": {
+        "A": "$(\\frac{A}{B})^{\\frac{1}{5}}$",
+        "B": "$(\\frac{B}{A})^{\\frac{1}{5}}$",
+        "C": "$(\\frac{2A}{B})^{\\frac{1}{5}}$",
+        "D": "$(\\frac{B}{2A})^{\\frac{1}{5}}$"
+      },
+      "answer": "C",
+      "elo": 1510,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 47,
+      "text": "A 0.5 kg block moving at a speed of $12ms^{-1}$ compresses a spring through a distance 30 cm when its speed is halved. The spring constant of the spring will be ______ $Nm^{-1}$.",
+      "type": "SA",
+      "answer": "600",
+      "elo": 1590,
+      "topic": ["Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 48,
+      "text": "A particle of mass m is moving in a circular path of constant radius r such that its centripetal acceleration is varying with time t as $a=k^{2}rt^{2}$, where k is a constant. The power delivered to the particle by the force acting on it is given as",
+      "type": "MCQ",
+      "options": {
+        "A": "zero",
+        "B": "$mk^{2}r^{2}t^{2}$",
+        "C": "$mk^{2}r^{2}t$",
+        "D": "$mk^{2}rt$"
+      },
+      "answer": "C",
+      "elo": 1610,
+      "topic": ["Circular Motion", "Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 49,
+      "text": "A pendulum of length 2m consists of a wooden bob of mass 50g. A bullet of mass 75g is fired towards the stationary bob with a speed v. The bullet emerges out of the bob with a speed $\\frac{v}{3}$ and the bob just completes the vertical circle. The value of v is ______ $ms^{-1}$. (if $g=10m/s^{2}$).",
+      "type": "SA",
+      "answer": "10",
+      "elo": 1630,
+      "topic": ["Momentum and Collisions", "Circular Motion", "Work, Energy, and Power"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 50,
+      "text": "Sand is being dropped from a stationary dropper at a rate of $0.5kgs^{-1}$ on a conveyor belt moving with a velocity of $5ms^{-1}$. The power needed to keep the belt moving with the same velocity will be:",
+      "type": "MCQ",
+      "options": {
+        "A": "1.25W",
+        "B": "2.5W",
+        "C": "6.25W",
+        "D": "12.5W"
+      },
+      "answer": "D",
+      "elo": 1690,
+      "topic": ["Work, Energy, and Power", "Variable Mass Systems"],
+      "subject": "Physics",
+      "difficulty_initial": "Hard"
+    }
+  ]
