@@ -1,92 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clario | Sign Up</title>
-  <link rel="stylesheet" href="signup.css">
-  <link href="chatbot/static/css/main.99047ad9.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clario | Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="chatbot/static/css/main.99047ad9.css" rel="stylesheet">
+
+    <!--
+      CRITICAL FIX:
+      Replaced the broken 'node_modules' paths with the official Firebase CDN URLs.
+      This will fix all your 404 (Not Found) errors.
+    -->
+    <script type="importmap">
+    {
+        "imports": {
+            "firebase/app": "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js",
+            "firebase/auth": "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js",
+            "firebase/firestore": "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js",
+            "firebase/analytics": "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js"
+        }
+    }
+    </script>
 </head>
 <body>
 
-  <div class="container">
-    <!-- LEFT SECTION -->
-    <div class="left-section">
-      <h2 class="logo">Clario</h2>
-      <h3>Learn. Explore. Conquer the Galaxy.</h3>
-
-      <div class="astronaut-card">
-        <img src="jn6nvpEKvoBwWPP3hNEnWa.png" alt="Astronaut floating in space">
-
-        <div class="welcome-box">
-          <p>
-            Ready to begin your cosmic journey?<br>
-            Sign up and start exploring your learning galaxies!
-          </p>
+    <div class="container">
+        <!-- LEFT SECTION -->
+        <div class="left-section">
+            <h2 class="logo">Clario</h2>
+            <h3>Learn. Explore. Conquer</h3>
+            <div class="astronaut-card">
+                <img src="jn6nvpEKvoBwWPP3hNEnWa.png" alt="Astronaut floating in space">
+                <div class="welcome-box">
+                    <p>
+                        Ready to begin your cosmic journey?<br>
+                        Sign up and start exploring your learning galaxies!
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- RIGHT SECTION -->
+        <div class="right-section">
+            <div class="tab">
+                <button onclick="window.location.href='login.html'">Login</button>
+                <button class="active">Sign Up</button>
+            </div>
+
+            <div class="signup-card">
+                <h3>Join the Clario Universe</h3>
+                <p class="subtitle">Create your explorer profile</p>
+
+                <p id="auth-error-message" style="color: red; margin-bottom: 15px;"></p>
+
+                <form id="signup-form">
+                    <!-- IDs are all correct -->
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="nameInput" placeholder="Your cosmic name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" id="signupEmailInput" placeholder="explorer@galaxy.space" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="signupPasswordInput" placeholder="Create a secure password" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Class</label>
+                        <select id="classSelect" required>
+                            <option value="">Select your class</option>
+                            <option value="11">11th</option>
+                            <option value="12">12th</option>
+                        </select>
+                    </div>
+
+                    <div class="agreement">
+                        <label>
+                            <input type="checkbox" required>
+                            I'm ready to explore the galaxy of knowledge and agree to the cosmic terms.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="launch-btn">🚀 Start Journey</button>
+
+                    <p class="signup-text">
+                        Already have an account?
+                        <a href="login.html">Launch into Learning →</a>
+                    </p>
+
+                </form>
+            </div>
+        </div>
     </div>
 
-    <!-- RIGHT SECTION -->
-    <div class="right-section">
-      <div class="tab">
-        <button onclick="window.location.href='login.html'">Login</button>
-        <button class="active">Sign Up</button>
-      </div>
-
-      <div class="signup-card">
-        <h3>Join the Clario Universe</h3>
-        <p class="subtitle">Create your explorer profile</p>
-
-        <form id="signup-form">
-          <!-- Inputs -->
-          <div class="input-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="Your cosmic name" required>
-          </div>
-
-          <div class="input-group">
-            <label>Email</label>
-            <input type="email" placeholder="explorer@galaxy.space" required>
-          </div>
-
-          <div class="input-group">
-            <label>Password</label>
-            <input type="password" placeholder="Create a secure password" required>
-          </div>
-
-          <div class="input-group">
-            <label>Class</label>
-            <select required>
-              <option value="">Select your class</option>
-              <option value="11">11th</option>
-              <option value="12">12th</option>
-            </select>
-          </div>
-
-         
-
-          <!-- Agreement -->
-          <div class="agreement">
-            <label>
-              <input type="checkbox" required>
-              I’m ready to explore the galaxy of knowledge and agree to the cosmic terms.
-            </label>
-          </div>
-
-          <button type="submit" class="launch-btn">🚀 Start Journey</button>
-
-          <p class="signup-text">
-            Already have an account?
-            <a href="login.html">Launch into Learning →</a>
-          </p>
-
-        </form>
-      </div>
-    </div>
-  </div>
-<script src="signup.js"></script>
-<div id="root"></div>
-<script src="chatbot/static/js/main.1140d99e.js"></script>
+    <!-- Script tags are correct -->
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="signup.js"></script>
+    <div id="root"></div>
+    <script src="chatbot/static/js/main.1140d99e.js"></script>
 </body>
 </html>
+
