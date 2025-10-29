@@ -36,19 +36,50 @@ function App() {
     setIsOpen(!isOpen);
   };
 
-  const handleSendMessage = (userMessage) => {
+  const handleSendMessage = async (userMessage) => {
     // Add user's message
     const newMessages = [...messages, { sender: 'user', text: userMessage }];
     setMessages(newMessages);
 
-    // --- DUMMY BOT RESPONSE (FOR FRONTEND) ---
-    // This is where you'll later call the Gemini API
-    setTimeout(() => {
+    // Add a "thinking" message
+    const thinkingMessages = [...newMessages, { sender: 'bot', text: '💭 Thinking...' }];
+    setMessages(thinkingMessages);
+
+    try {
+      // Call the Gemini API backend
+      const response = await fetch('http://localhost:5002/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: userMessage,
+          history: messages
+            .filter(msg => msg.sender !== 'bot' || !msg.text.includes('💭'))
+            .map(msg => ({
+              role: msg.sender === 'user' ? 'user' : 'model',
+              parts: [{ text: msg.text }]
+            }))
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`API Error: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      // Replace thinking message with actual response
+      setMessages([...newMessages, { sender: 'bot', text: data.reply }]);
+
+    } catch (error) {
+      console.error('Error calling chatbot API:', error);
+      // Replace thinking message with error message
       setMessages([
         ...newMessages,
-        { sender: 'bot', text: "That's a great question! I'm processing..." }
+        { sender: 'bot', text: "Sorry, I'm having trouble connecting. Please make sure the backend server is running on port 5002." }
       ]);
-    }, 1000);
+    }
   };
 
   return (

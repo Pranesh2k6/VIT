@@ -6,6 +6,21 @@
   <title>Clario | Login</title>
   <link rel="stylesheet" href="login.css">
   <link href="chatbot/static/css/main.99047ad9.css" rel="stylesheet">
+
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
 
@@ -71,6 +86,6 @@
   </div>
 <script src="login.js"></script>
 <div id="root"></div>
-<script src="chatbot/static/js/main.1140d99e.js"></script>
+<script src="chatbot/static/js/main.d76ae851.js"></script>
 </body>
 </html>

@@ -1,6 +1,22 @@
 // src/ChatWindow.js
 import React, { useState, useRef, useEffect } from 'react';
 
+// Component to render LaTeX in messages
+function LatexMessage({ text }) {
+  const messageRef = useRef(null);
+
+  useEffect(() => {
+    // Trigger MathJax to render LaTeX formulas
+    if (window.MathJax && messageRef.current) {
+      window.MathJax.typesetPromise([messageRef.current]).catch((err) =>
+        console.log('MathJax typeset failed:', err)
+      );
+    }
+  }, [text]);
+
+  return <div ref={messageRef}>{text}</div>;
+}
+
 function ChatWindow({ onClose, messages, onSendMessage }) {
   const [input, setInput] = useState('');
   const messagesEndRef = useRef(null);
@@ -27,7 +43,7 @@ function ChatWindow({ onClose, messages, onSendMessage }) {
       <div className="chat-body">
         {messages.map((msg, index) => (
           <div key={index} className={`chat-message ${msg.sender}`}>
-            {msg.text}
+            <LatexMessage text={msg.text} />
           </div>
         ))}
         <div ref={messagesEndRef} />

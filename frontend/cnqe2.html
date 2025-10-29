@@ -44,6 +44,22 @@
   /* dark-mode toggle appearance handled via CSS variables if toggled */
   html.dark-mode { --bg-1:#040010; --bg-2:#020008; --accent:#9ab0ff; --accent2:#7fb0ff }
 </style>
+
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        processEscapes: true
+      },
+      svg: {
+        fontCache: "global"
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
 </head>
 <body>
 

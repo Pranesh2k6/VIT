@@ -22,6 +22,22 @@
         }
     }
     </script>
+
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        processEscapes: true
+      },
+      svg: {
+        fontCache: "global"
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
 </head>
 <body>
 
@@ -103,7 +119,7 @@
     <script type="module" src="firebase-config.js"></script>
     <script type="module" src="signup.js"></script>
     <div id="root"></div>
-    <script src="chatbot/static/js/main.1140d99e.js"></script>
+    <script src="chatbot/static/js/main.d76ae851.js"></script>
 </body>
 </html>
 
