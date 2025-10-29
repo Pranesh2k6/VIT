@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature of Roots</title>
+    <link rel="stylesheet" href="style.css">
+    <script> MathJax = { tex: { inlineMath: [['$', '$']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html">Missions</a>
+        <a href="theory.html">Theory</a>
+        <a href="video.html">Video</a>
+        <a href="examples.html" class="active">Examples</a>
+    </div>
+    <div class="container chapter-container">
+        <a href="index.html" class="back-btn">← Back to Missions</a>
+        <h1 class="title">Example Problems: Nature of Roots</h1>
+        <p class="subtitle">Practice predicting root types using the discriminant!</p>
+        <div class="example-card">
+            <h2>⭐ Example 1 (D > 0)</h2>
+            <p><b>Q:</b> Determine the nature of the roots for $2x^2 - 7x + 3 = 0$.</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                $a=2, b=-7, c=3$.<br>
+                $D = b^2 - 4ac = (-7)^2 - 4(2)(3) = 49 - 24 = 25$.<br>
+                Since $D = 25 > 0$, the roots are **real and distinct**.
+            </div>
+        </div>
+        <div class="example-card">
+            <h2>⭐ Example 2 (D = 0)</h2>
+            <p><b>Q:</b> Determine the nature of the roots for $x^2 - 10x + 25 = 0$.</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                $a=1, b=-10, c=25$.<br>
+                $D = b^2 - 4ac = (-10)^2 - 4(1)(25) = 100 - 100 = 0$.<br>
+                Since $D = 0$, the roots are **real and equal**.
+            </div>
+        </div>
+        <div class="example-card">
+            <h2>⭐ Example 3 (D < 0)</h2>
+            <p><b>Q:</b> Determine the nature of the roots for $x^2 + x + 1 = 0$.</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                $a=1, b=1, c=1$.<br>
+                $D = b^2 - 4ac = (1)^2 - 4(1)(1) = 1 - 4 = -3$.<br>
+                Since $D = -3 < 0$, the roots are **complex conjugates** (not real).
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <a href="theory.html" class="nav-btn">⬅ Theory</a>
+            <a href="../3-relations/index.html" class="nav-btn">Next Level ➡</a>
+        </div>
+    </div>
+</body>
+</html>

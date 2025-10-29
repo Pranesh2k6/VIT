@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Root Relations</title>
+    <link rel="stylesheet" href="style.css" />
+    <script> MathJax = { tex: { inlineMath: [['$', '$']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html">Missions</a>
+        <a href="theory.html" class="active">Theory</a>
+        <a href="video.html">Video</a>
+        <a href="examples.html">Examples</a>
+    </div>
+
+    <div class="container">
+        <h1><span style="font-family: monospace;">α+β</span> Relations Between Roots & Coefficients</h1>
+
+        <div class="dr-neutron">
+            <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+            <p>Cadet, there's a hidden connection! The roots of a quadratic equation are directly related to its coefficients. Let's uncover Vieta's secrets!</p>
+        </div>
+
+        <div class="level-box">
+            <h2>🧩 Level 1 Concept – Defining the Roots ($\alpha, \beta$)</h2>
+            <p>For a standard quadratic equation $ax^2 + bx + c = 0$ (where $a \neq 0$), the solutions or roots are the values of $x$ that satisfy the equation. Let's denote these roots as $\alpha$ and $\beta$.</p>
+            <p>These roots can be found using the quadratic formula: $\alpha, \beta = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.</p>
+        </div>
+
+        <div class="level-box">
+            <h2>⚔️ Level 2 Concept – Vieta's Formula: Sum of Roots</h2>
+            <p>Without actually calculating the individual roots, we can find their sum directly from the coefficients.</p>
+            <p>The **sum of the roots** is given by: $\mathbf{\alpha + \beta = -\frac{b}{a}}$</p>
+             <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>Just take the negative of the middle coefficient ($b$) and divide by the leading coefficient ($a$). Easy peasy!</p>
+            </div>
+        </div>
+
+        <div class="level-box">
+            <h2>🧗 Level 3 Concept – Vieta's Formula: Product of Roots</h2>
+            <p>Similarly, we can find the product of the roots directly from the coefficients.</p>
+            <p>The **product of the roots** is given by: $\mathbf{\alpha \beta = \frac{c}{a}}$</p>
+            <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>This time, take the constant term ($c$) and divide by the leading coefficient ($a$). Vieta makes calculations faster!</p>
+            </div>
+        </div>
+
+        <div class="level-box">
+            <h2>🧙‍♂️ Level 4 Concept – Forming a Quadratic Equation from Roots</h2>
+            <p>If you know the roots $\alpha$ and $\beta$, you can construct the quadratic equation.</p>
+            <p>A quadratic equation with roots $\alpha$ and $\beta$ can be written as: $k(x - \alpha)(x - \beta) = 0$, where $k$ is any non-zero constant.</p>
+            <p>Expanding this (and usually taking $k=1$ for simplicity) gives the useful form:</p>
+            <p>$\mathbf{x^2 - (\alpha + \beta)x + (\alpha \beta) = 0}$</p>
+            <p>Or, $\mathbf{x^2 - (\text{Sum of Roots})x + (\text{Product of Roots}) = 0}$</p>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Missions</a>
+
+    </div> </body>
+</html>

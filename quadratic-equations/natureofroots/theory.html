@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature of Roots</title>
+    <link rel="stylesheet" href="style.css" />
+    <script> MathJax = { tex: { inlineMath: [['$', '$']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html">Missions</a>
+        <a href="theory.html" class="active">Theory</a>
+        <a href="video.html">Video</a>
+        <a href="examples.html">Examples</a>
+    </div>
+    <div class="container">
+        <h1><span style="font-family: monospace;">🌳</span> Nature of Roots</h1>
+        <div class="dr-neutron">
+            <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+            <p>The discriminant, $D = b^2 - 4ac$, is our guide! Its sign tells us exactly what kind of roots we'll find.</p>
+        </div>
+        <div class="level-box">
+            <h2>🧩 Case 1: $D > 0$ (Discriminant is Positive)</h2>
+            <p>If the discriminant is greater than zero ($D > 0$), the quadratic equation $ax^2 + bx + c = 0$ has **two distinct real roots**.</p>
+            <p>The roots are given by $x = \frac{-b + \sqrt{D}}{2a}$ and $x = \frac{-b - \sqrt{D}}{2a}$. Since $\sqrt{D}$ is a real number, both roots are real and different.</p>
+             <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>Positive D means two separate landing spots on the real number line!</p>
+            </div>
+        </div>
+        <div class="level-box">
+            <h2>⚔️ Case 2: $D = 0$ (Discriminant is Zero)</h2>
+            <p>If the discriminant is equal to zero ($D = 0$), the quadratic equation has **one real root** (or sometimes called **two equal real roots**).</p>
+            <p>The quadratic formula becomes $x = \frac{-b \pm \sqrt{0}}{2a} = \frac{-b}{2a}$. Both solutions converge to the same single value.</p>
+            <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>Zero D? Perfect landing! The parabola just touches the x-axis at one single point.</p>
+            </div>
+        </div>
+        <div class="level-box">
+            <h2>🧗 Case 3: $D < 0$ (Discriminant is Negative)</h2>
+            <p>If the discriminant is less than zero ($D < 0$), the quadratic equation has **two complex conjugate roots** (and no real roots).</p>
+            <p>The quadratic formula involves $\sqrt{D}$, which is $\sqrt{\text{negative number}} = i\sqrt{|D|}$. The roots are $x = \frac{-b \pm i\sqrt{|D|}}{2a}$. These roots are complex numbers of the form $p + iq$ and $p - iq$, where $p = -b/2a$ and $q = \sqrt{|D|}/2a$.</p>
+             <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>Negative D takes us into the complex realm! The roots come in pairs, like reflections across the real axis.</p>
+            </div>
+        </div>
+        <a href="index.html" class="back-link">← Back to Missions</a>
+    </div>
+</body>
+</html>
