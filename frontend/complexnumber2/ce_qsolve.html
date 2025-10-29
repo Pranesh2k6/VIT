@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complex Number Practice</title>
+  <link rel="stylesheet" href="ce-styles.css" />
+  <style>
+    body {
+      background: radial-gradient(circle at top, #001820, #000);
+      font-family: 'Poppins', sans-serif;
+      color: #00ffc8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #00ffc8;
+      font-size: 2rem;
+      text-shadow: 0 0 20px #00ffc8;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h1::before {
+      content: "🧮";
+      font-size: 1.8rem;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.4);
+      border: 2px solid rgba(0, 255, 200, 0.3);
+      box-shadow: 0 0 25px rgba(0, 255, 200, 0.3);
+      border-radius: 18px;
+      padding: 40px 50px;
+      width: 420px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    #question-box {
+      font-size: 1.2rem;
+      color: #e6ffff;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 85%;
+      padding: 10px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      color: #00ffc8;
+      font-size: 1rem;
+      box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+      transition: 0.3s;
+      margin-bottom: 15px;
+    }
+
+    input:focus {
+      box-shadow: 0 0 20px #00ffc8;
+    }
+
+    button {
+      background: #00ffc8;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+      box-shadow: 0 0 15px #00ffc8;
+    }
+
+    button:hover {
+      background: #00bfa5;
+      box-shadow: 0 0 25px #00ffc8;
+    }
+
+    #feedback {
+      margin-top: 15px;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .stats {
+      margin-top: 10px;
+      color: #00ffc8;
+      font-size: 0.95rem;
+    }
+
+    #retry-btn {
+      display: none;
+      margin-top: 20px;
+      background: transparent;
+      color: #00ffc8;
+      border: 2px solid #00ffc8;
+      border-radius: 10px;
+      padding: 10px 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #retry-btn:hover {
+      background: #00ffc8;
+      color: #000;
+      box-shadow: 0 0 20px #00ffc8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Complex Number Practice</h1>
+  <div class="container">
+    <div id="question-box"></div>
+    <input type="text" id="answer" placeholder="Enter your answer..." />
+    <br />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="feedback"></p>
+    <div class="stats">
+      Level: <span id="level">Easy</span> | Score: <span id="score">0</span>
+    </div>
+    <button id="retry-btn" onclick="restart()">Retry</button>
+  </div>
+
+  <script>
+    const questions = {
+      easy: [
+        { q: "Simplify (3 + 2i) + (1 - 4i)", a: "4-2i" },
+        { q: "Find modulus of 3 + 4i", a: "5" },
+        { q: "Find conjugate of 5 - 2i", a: "5+2i" },
+        { q: "Simplify i²", a: "-1" },
+        { q: "If z = 2 + 3i, find Re(z)", a: "2" }
+      ],
+      medium: [
+        { q: "Find (2 + i)(1 - 3i)", a: "5-5i" },
+        { q: "Simplify (1 + i)²", a: "2i" },
+        { q: "Find the argument of 1 + √3 i (in degrees)", a: "60" },
+        { q: "If |z|=5 and Re(z)=3, find Im(z)", a: "4" },
+        { q: "Simplify (4 + 2i)/(1 - i)", a: "1+3i" }
+      ],
+      hard: [
+        { q: "If z = 2 + 2i, find z³", a: "16i" },
+        { q: "Find cube roots of unity (comma separated)", a: "1,(-1+√3i)/2,(-1-√3i)/2" },
+        { q: "Solve for x: (1 + xi)² = -3 + 4i", a: "x=2" },
+        { q: "Find modulus of (1 + i)⁴", a: "4" },
+        { q: "Find conjugate of (2 + 3i)²", a: "-5-12i" }
+      ]
+    };
+
+    let score = 0;
+    let currentLevel = "easy";
+    let index = 0;
+
+    function loadQuestion() {
+      const list = questions[currentLevel];
+      if (index >= list.length) {
+        if (currentLevel === "easy") {
+          currentLevel = "medium";
+          index = 0;
+          document.getElementById("level").innerText = "Medium";
+          document.getElementById("feedback").innerText = "⬆️ Level Up: Medium!";
+          setTimeout(loadQuestion, 1200);
+          return;
+        } else if (currentLevel === "medium") {
+          currentLevel = "hard";
+          index = 0;
+          document.getElementById("level").innerText = "Hard";
+          document.getElementById("feedback").innerText = "⬆️ Level Up: Hard!";
+          setTimeout(loadQuestion, 1200);
+          return;
+        } else {
+          document.getElementById("question-box").innerText = "🎉 You’ve completed ALL levels!";
+          document.getElementById("answer").style.display = "none";
+          document.querySelector("button").style.display = "none";
+          document.getElementById("retry-btn").style.display = "block";
+          document.getElementById("feedback").innerText = "";
+          return;
+        }
+      }
+
+      document.getElementById("question-box").innerText = list[index].q;
+      document.getElementById("answer").value = "";
+      document.getElementById("feedback").innerText = "";
+    }
+
+    function checkAnswer() {
+      const ans = document.getElementById("answer").value.trim().replace(/\s+/g, '').toLowerCase();
+      const correct = questions[currentLevel][index].a.replace(/\s+/g, '').toLowerCase();
+      const feedback = document.getElementById("feedback");
+
+      if (ans === correct) {
+        feedback.innerText = "✅ Correct!";
+        feedback.style.color = "#00ffc8";
+        score += 4;
+      } else {
+        feedback.innerText = "❌ Wrong! Correct: " + questions[currentLevel][index].a;
+        feedback.style.color = "#ff4d4d";
+        score -= 1;
+      }
+
+      document.getElementById("score").innerText = score;
+      index++;
+      setTimeout(loadQuestion, 1200);
+    }
+
+    function restart() {
+      score = 0;
+      currentLevel = "easy";
+      index = 0;
+      document.getElementById("answer").style.display = "inline";
+      document.querySelector("button").style.display = "inline";
+      document.getElementById("retry-btn").style.display = "none";
+      document.getElementById("score").innerText = "0";
+      document.getElementById("level").innerText = "Easy";
+      loadQuestion();
+    }
+
+    loadQuestion();
+  </script>
+</body>
+</html>
