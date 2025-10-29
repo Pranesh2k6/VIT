@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Complex Numbers — Expedition (Final)</title>
+<style>
+  :root{
+    --bg-1:#070012;
+    --bg-2:#05000a;
+    --accent:#a855f7;
+    --accent2:#b38ef3;
+    --gold:#f6c85b;
+    --panel: rgba(14,4,30,0.7);
+    --text:#eafefe;
+  }
+  html,body{height:100%;margin:0;font-family:Inter, system-ui, Arial, monospace;background:linear-gradient(180deg,var(--bg-1),var(--bg-2)); color:var(--text); overflow:hidden}
+  .btn{cursor:pointer;border-radius:8px;padding:8px 12px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);font-weight:700}
+  #topControls{position:fixed; right:14px; top:14px; z-index:220; display:flex; gap:8px; align-items:center}
+  #starsCanvas, #gameCanvas {position:fixed; left:0; top:0; display:block}
+  #miniMap { position:fixed; right:14px; bottom:14px; width:140px; height:110px; z-index:210; border-radius:10px; background:rgba(6,2,12,0.6); border:2px solid var(--accent); box-shadow:0 12px 40px rgba(168,85,247,0.06); }
+  #dialogue { position:fixed; left:50%; transform:translateX(-50%); bottom:28px; z-index:230; width:86%; max-width:1100px; background:linear-gradient(180deg, rgba(0,0,0,0.7), rgba(8,6,12,0.82)); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.04); box-shadow:0 12px 40px rgba(0,0,0,0.6); display:none; }
+  #dialogue small{display:block;margin-top:8px;color:rgba(200,255,250,0.72);font-size:13px}
+  #skipBtn{position:absolute; right:12px; bottom:12px; font-weight:800}
+  #tooltip { position:fixed; z-index:240; pointer-events:none; left:50%; transform:translateX(-50%); bottom:120px; background:var(--panel); padding:8px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); display:none; color:var(--text); font-weight:800 }
+  /* mission mini badge */
+  .miniBadge { position:fixed; left:50%; transform:translateX(-50%) translateY(-10px); top:18%; z-index:240; padding:10px 16px; border-radius:12px; font-weight:900; display:none; }
+  /* final cinematic overlay */
+  #finalOverlay {
+    position:fixed; left:50%; top:50%; transform:translate(-50%,-50%) scale(.86); z-index:260;
+    width:88%; max-width:900px; background:linear-gradient(180deg, rgba(10,4,26,0.98), rgba(16,6,36,0.98));
+    border-radius:16px; padding:22px; border:1px solid rgba(255,255,255,0.04); display:none; color:var(--text);
+    box-shadow:0 40px 140px rgba(0,0,0,0.7);
+  }
+  #finalOverlay.show { animation: finalIn .6s cubic-bezier(.2,.9,.25,1) forwards; }
+  @keyframes finalIn { from { opacity:0; transform:translate(-50%,-50%) scale(.86); filter:blur(2px) } to { opacity:1; transform:translate(-50%,-50%) scale(1); filter:blur(0) } }
+  .finalTitle { font-size:24px; font-weight:900; color:var(--gold); text-align:center; margin-bottom:6px }
+  .finalSub { text-align:center; color:#e6e6ff; margin-bottom:14px; font-weight:800 }
+  .finalActions { display:flex; justify-content:center; gap:12px; margin-top:8px }
+  .completeBtn { background:linear-gradient(90deg,var(--gold),#f2b94a); color:#120707; border:none; padding:12px 18px; font-weight:900; border-radius:10px; cursor:pointer; text-decoration:none; }
+  .closeFinal { background:transparent; border:1px solid rgba(255,255,255,0.06); padding:10px 14px; border-radius:10px; cursor:pointer; color:var(--text); }
+  /* small hint */
+  #hint { position:fixed; left:12px; bottom:16px; z-index:210; color:rgba(255,255,255,0.12); font-size:12px }
+  /* dark-mode toggle appearance handled via CSS variables if toggled */
+  html.dark-mode { --bg-1:#040010; --bg-2:#020008; --accent:#9ab0ff; --accent2:#7fb0ff }
+</style>
+</head>
+<body>
+
+<canvas id="starsCanvas"></canvas>
+<canvas id="gameCanvas"></canvas>
+<canvas id="mapCanvas" style="display:block;"></canvas>
+
+<div id="topControls">
+  <button id="themeToggle" class="btn">🌙 Dark</button>
+  <button id="resetBtn" class="btn">Reset Progress</button>
+</div>
+
+<div id="dialogue" role="dialog" aria-live="polite" aria-atomic="true">
+  <div id="dialogueTxt"></div>
+  <small>Press <strong>SPACE</strong> to continue</small>
+  <button id="skipBtn">Skip ⏭️</button>
+</div>
+
+<div id="tooltip">Press <strong>Enter</strong> to Explore</div>
+<div id="miniBadge" class="miniBadge" style="background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#041018;"></div>
+
+<div id="finalOverlay" role="dialog" aria-modal="true">
+  <div class="finalTitle">Concept Mastery Achieved!</div>
+  <div class="finalSub" id="finalPhrase">All subtopics cleared — badge awarded.</div>
+  <div style="text-align:center; color:rgba(230,230,255,0.9);">Great job — you mastered the chapter.</div>
+  <div class="finalActions">
+    <!-- user to replace href with actual target -->
+    <a id="finalComplete" class="completeBtn" href="#" target="_blank" rel="noopener">Complete Mission</a>
+    <button id="closeFinal" class="closeFinal">Close</button>
+  </div>
+</div>
+
+<div id="hint">WASD / Arrow keys to move • Approach an asteroid to get the prompt</div>
+
+<script>
+/* --------------------------- Setup / Canvas sizing --------------------------- */
+const starsCanvas = document.getElementById('starsCanvas');
+const gameCanvas = document.getElementById('gameCanvas');
+const mapCanvas = document.getElementById('mapCanvas');
+const sctx = starsCanvas.getContext('2d');
+const ctx = gameCanvas.getContext('2d');
+const mctx = mapCanvas.getContext('2d');
+
+function resize() {
+  starsCanvas.width = innerWidth; starsCanvas.height = innerHeight;
+  gameCanvas.width = innerWidth; gameCanvas.height = innerHeight;
+  mapCanvas.width = 140; mapCanvas.height = 110;
+}
+window.addEventListener('resize', resize);
+resize();
+
+/* --------------------------- World config --------------------------- */
+const WORLD = { size: 3000 }; // square world: -size/2 .. +size/2
+const STAR_COUNT = 160;
+const STAR_TWINKLE_SPEED = 0.00045; // slow twinkle
+let stars = [];
+for (let i=0;i<STAR_COUNT;i++){
+  stars.push({
+    x: (Math.random()-0.5)*WORLD.size,
+    y: (Math.random()-0.5)*WORLD.size,
+    base: Math.random()*0.6 + 0.12,
+    phase: Math.random()*Math.PI*2,
+    tw: Math.random()*0.7 + 0.3
+  });
+}
+
+/* --------------------------- Player (Dr. Neutron image) --------------------------- */
+const player = { x:0, y:0, vx:0, vy:0, size:46, accel:0.8, friction:0.86, maxSpeed:7 };
+const playerImg = new Image();
+playerImg.src = 'red.jpg'; // use the uploaded Dr. Neutron image
+playerImg.onload = ()=>{ /* ready */ };
+
+/* --------------------------- Asteroids (topics) --------------------------- */
+const topics = [
+  "Complex Number Operations & Polar Form",
+  "Modulus–Argument Form",
+  "Relations",
+  "Discriminant",
+  "Nature of Roots and Relations"
+];
+let asteroids = []; // each {id,x,y,r,done}
+function spawnAsteroids(){
+  asteroids = [];
+  const count = topics.length;
+  const rbase = Math.min(innerWidth, innerHeight)/2 + 240;
+  for (let i=0;i<count;i++){
+    const ang = (i / count) * Math.PI*2;
+    const jitter = (Math.random()-0.5)*0.8;
+    const rx = Math.cos(ang + jitter) * (rbase * (0.9 + Math.random()*0.36));
+    const ry = Math.sin(ang + jitter) * (rbase * (0.9 + Math.random()*0.36));
+    let size = 80 + Math.random()*30;
+    // final "boss" (last one) should be larger and golden
+    if (i === topics.length - 1) size = size * 1.5;
+    asteroids.push({ id: topics[i], x: rx, y: ry, r: size/2, done:false });
+  }
+}
+spawnAsteroids();
+
+/* --------------------------- localStorage progress --------------------------- */
+const PROG_KEY = 'expedition_topics_v1';
+let savedProgress = JSON.parse(localStorage.getItem(PROG_KEY) || '{}');
+function saveProgress(){ localStorage.setItem(PROG_KEY, JSON.stringify(savedProgress)); }
+function resetProgress(){ if(confirm('Reset progress?')){ savedProgress = {}; localStorage.removeItem(PROG_KEY); location.reload(); } }
+document.getElementById('resetBtn').addEventListener('click', resetProgress);
+
+/* apply saved progress */
+for (let a of asteroids) if (savedProgress[a.id]) a.done = true;
+
+/* --------------------------- links for asteroids (fill by user) --------------------------- */
+const asteroidLinks = {
+  "Complex Number Operations & Polar Form": "/frontend/complexnumber/complex.html", // replace with your page
+  "Modulus–Argument Form": "/frontend/complexnumber2/ce.html",
+  "Relations": "/frontend/quadratic-equations/relations/index.html",
+  "Discriminant": "/frontend/quadratic-equations/discriminant/index.html",
+  "Nature of Roots and Relations": "/frontend/quadratic-equations/natureofroots/index.html" // final boss; you may set different behavior
+};
+
+/* --------------------------- UI references --------------------------- */
+const dialogueEl = document.getElementById('dialogue');
+const dialogueTxt = document.getElementById('dialogueTxt');
+const skipBtn = document.getElementById('skipBtn');
+const tooltip = document.getElementById('tooltip');
+const miniBadge = document.getElementById('miniBadge');
+const finalOverlay = document.getElementById('finalOverlay');
+const finalPhrase = document.getElementById('finalPhrase');
+const finalComplete = document.getElementById('finalComplete');
+const closeFinal = document.getElementById('closeFinal');
+const themeBtn = document.getElementById('themeToggle');
+
+/* --------------------------- theme toggle --------------------------- */
+document.documentElement.classList.add('dark-mode');
+themeBtn.textContent = '🌙 Dark';
+themeBtn.addEventListener('click', ()=>{
+  document.documentElement.classList.toggle('dark-mode');
+  themeBtn.textContent = document.documentElement.classList.contains('dark-mode') ? '🌙 Dark' : '🔆 Light';
+});
+
+/* --------------------------- dialogue (typewriter) --------------------------- */
+const dialogues = [
+  "Dr. Neutron: The Complex Quadrant hums with imaginary charge. Those asteroids hide concepts we must tidy up.",
+  "Dr. Neutron: Mount Rayquaza and approach each floating comet. Study theory, watch the lecture, solve practice — then CLEAN THE MESS.",
+  "Controls: Arrow keys or WASD to move. Press ENTER to explore an asteroid when prompted.",
+  "Press SPACE to begin the mission..."
+];
+let dIndex = 0, typing=false, state='dialogue';
+function showDialogue(text){
+  dialogueEl.style.display = 'block';
+  dialogueTxt.textContent = '';
+  typing = true;
+  let i=0;
+  (function tick(){ if (i < text.length){ dialogueTxt.textContent += text.charAt(i); i++; setTimeout(tick, 22); } else typing = false; })();
+}
+function advanceDialogue(){
+  if (typing) return;
+  if (dIndex < dialogues.length){ showDialogue(dialogues[dIndex]); dIndex++; }
+  else { dialogueEl.style.display = 'none'; state='explore'; }
+}
+window.addEventListener('load', ()=>{ setTimeout(()=>{ showDialogue(dialogues[0]); dIndex=1; }, 180); });
+window.addEventListener('keydown', e => { if (e.code==='Space' && state==='dialogue'){ e.preventDefault(); advanceDialogue(); } });
+skipBtn.addEventListener('click', ()=>{ dIndex = dialogues.length; typing=false; dialogueEl.style.display='none'; state='explore'; });
+
+/* --------------------------- input handling --------------------------- */
+const keys = {};
+window.addEventListener('keydown', e => {
+  keys[e.key.toLowerCase()] = true;
+  if (e.key === 'Enter' && state === 'explore') tryEnterOnNearby();
+});
+window.addEventListener('keyup', e => { keys[e.key.toLowerCase()] = false; });
+
+/* --------------------------- drawing functions --------------------------- */
+function drawStars(now){
+  sctx.clearRect(0,0,starsCanvas.width,starsCanvas.height);
+  for (let s of stars){
+    const sx = (starsCanvas.width/2) + (s.x - player.x);
+    const sy = (starsCanvas.height/2) + (s.y - player.y);
+    const a = Math.max(0.02, Math.min(1, s.base + Math.sin(now*STAR_TWINKLE_SPEED*s.tw + s.phase)*0.05));
+    sctx.fillStyle = `rgba(220,220,255,${a})`;
+    sctx.fillRect(Math.round(sx), Math.round(sy), 1, 1);
+  }
+}
+
+function drawWorld(){
+  ctx.clearRect(0,0,gameCanvas.width,gameCanvas.height);
+  ctx.save();
+  // center camera on player
+  ctx.translate(gameCanvas.width/2 - player.x, gameCanvas.height/2 - player.y);
+
+  // draw asteroids
+  for (let a of asteroids){
+    if (a.done){
+      // small completed glow
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(80,200,150,0.06)';
+      ctx.arc(a.x, a.y, a.r+18, 0, Math.PI*2);
+      ctx.fill();
+    }
+    // boss final colored differently
+    if (a.id === topics[topics.length-1]){
+      // golden outer + purple core
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(246,200,91,0.95)';
+      ctx.shadowBlur = 26; ctx.shadowColor = 'rgba(246,200,91,0.28)';
+      ctx.arc(a.x, a.y, a.r+8, 0, Math.PI*2); ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(179,142,243,1)';
+      ctx.shadowBlur = 18; ctx.shadowColor = '#a855f7';
+      ctx.arc(a.x, a.y, a.r, 0, Math.PI*2); ctx.fill();
+      ctx.shadowBlur = 0;
+    } else {
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(179,142,243,1)';
+      ctx.shadowBlur = 18; ctx.shadowColor = '#a855f7';
+      ctx.arc(a.x, a.y, a.r, 0, Math.PI*2); ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+    // label
+    ctx.fillStyle = 'rgba(240,240,255,0.95)';
+    ctx.font = '12px monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText(a.id, a.x, a.y + a.r + 16);
+  }
+
+  // player sprite (image)
+  const pw = player.size, ph = player.size;
+  ctx.save();
+  ctx.translate(player.x - pw/2, player.y - ph/2);
+  // draw shadow/glow
+  ctx.beginPath();
+  ctx.fillStyle = 'rgba(168,85,247,0.06)';
+  ctx.arc(player.size/2, player.size/2, player.size/1.6, 0, Math.PI*2);
+  ctx.fill();
+  ctx.drawImage(playerImg, 0, 0, pw, ph);
+  ctx.restore();
+
+  ctx.restore();
+}
+
+/* --------------------------- minimap drawing --------------------------- */
+function drawMini(){
+  mctx.clearRect(0,0,mapCanvas.width,mapCanvas.height);
+  // background
+  mctx.fillStyle = 'rgba(6,2,12,0.6)';
+  mctx.fillRect(0,0,mapCanvas.width,mapCanvas.height);
+  // center mapping scale
+  const scale = mapCanvas.width / WORLD.size;
+  // draw asteroids
+  for (let a of asteroids){
+    if (savedProgress[a.id]) mctx.fillStyle = '#22c55e';
+    else if (a.id === topics[topics.length-1]) mctx.fillStyle = '#f6c85b';
+    else mctx.fillStyle = '#b38ef3';
+    const mx = mapCanvas.width/2 + a.x*scale;
+    const my = mapCanvas.height/2 + a.y*scale;
+    mctx.beginPath(); mctx.arc(mx, my, 3, 0, Math.PI*2); mctx.fill();
+  }
+  // player marker
+  mctx.fillStyle = '#a855f7';
+  const px = mapCanvas.width/2 + player.x*scale, py = mapCanvas.height/2 + player.y*scale;
+  mctx.beginPath(); mctx.arc(px, py, 3.5, 0, Math.PI*2); mctx.fill();
+}
+
+/* --------------------------- approach detection & tooltip --------------------------- */
+const tooltipEl = document.getElementById('tooltip');
+let nearbyAsteroid = null;
+function checkProximity(){
+  nearbyAsteroid = null;
+  for (let a of asteroids){
+    if (a.done) continue;
+    const dist = Math.hypot(player.x - a.x, player.y - a.y);
+    if (dist < a.r + player.size/2 + 18){
+      nearbyAsteroid = a;
+      break;
+    }
+  }
+  if (nearbyAsteroid && state==='explore'){
+    tooltipEl.style.display = 'block';
+  } else {
+    tooltipEl.style.display = 'none';
+  }
+}
+
+/* center tooltip above player */
+function positionTooltip(){
+  if (tooltipEl.style.display === 'block'){
+    tooltipEl.style.left = (innerWidth/2) + 'px';
+    tooltipEl.style.bottom = '110px';
+  }
+}
+
+/* --------------------------- Enter action on asteroid --------------------------- */
+function tryEnterOnNearby(){
+  if (!nearbyAsteroid) return;
+  const a = nearbyAsteroid;
+  // open link in new tab (user to replace hrefs)
+  const href = asteroidLinks[a.id] || '#';
+  
+  // Mark as done in progress immediately
+  savedProgress[a.id] = true;
+  a.done = true;
+  saveProgress();
+  
+  // show small badge
+  showMiniBadge('Cleared: ' + a.id);
+
+  // --- MODIFIED LOGIC ---
+  // Check if clearing this one completes the mission
+  const doneCount = asteroids.filter(ast => ast.done).length;
+  const totalCount = asteroids.length;
+  const isMissionComplete = (doneCount >= totalCount);
+
+  if (isMissionComplete) {
+    // This was the last planet!
+    // 1. Set the popup button's link
+    if (href && href !== '#') {
+      finalComplete.href = href;
+    }
+    // 2. Do NOT open the window.
+    //    checkAllComplete() will be called next and will show the popup.
+  } else {
+    // This was not the last planet.
+    // Open the link immediately as normal.
+    if (href && href !== '#') {
+      window.open(href, '_blank');
+    }
+  }
+  // --- END MODIFICATION ---
+
+  // check if all completed (this will show the popup if it was the last one)
+  checkAllComplete();
+}
+
+/* --------------------------- mini badge + final cinematic --------------------------- */
+function showMiniBadge(text){
+  const b = document.getElementById('miniBadge');
+  b.textContent = text;
+  b.style.display = 'block';
+  b.style.opacity = 0;
+  b.style.transform = 'translate(-50%, -6px) scale(.96)';
+  // animate
+  requestAnimationFrame(()=>{ b.style.transition = 'transform .45s cubic-bezier(.2,.9,.2,1), opacity .45s'; b.style.opacity = 1; b.style.transform = 'translate(-50%, 0) scale(1)'; });
+  setTimeout(()=>{ b.style.transition = 'opacity .6s'; b.style.opacity = 0; setTimeout(()=>b.style.display='none',650); }, 2400);
+}
+
+function checkAllComplete(){
+  const total = asteroids.length;
+  const done = asteroids.filter(a=>a.done || savedProgress[a.id]).length;
+  if (done >= total){
+    // all cleared -> show final cinematic overlay
+    finalPhrase.textContent = "You've cleared every subtopic — Badge awarded!";
+    finalOverlay.classList.add('show');
+    finalOverlay.style.display = 'block';
+    state = 'paused';
+  }
+}
+
+/* close final overlay */
+closeFinal.addEventListener('click', ()=>{ finalOverlay.classList.remove('show'); finalOverlay.style.display='none'; state='explore'; });
+
+/* --------------------------- collision / game loop --------------------------- */
+let last = performance.now();
+function loop(now){
+  const dt = now - last; last = now;
+  drawStars(now);
+  if (state === 'explore'){
+    // movement input (accel + friction)
+    let ax = 0, ay = 0;
+    if (keys['arrowup'] || keys['w']) ay -= player.accel;
+    if (keys['arrowdown'] || keys['s']) ay += player.accel;
+    if (keys['arrowleft'] || keys['a']) ax -= player.accel;
+    if (keys['arrowright'] || keys['d']) ax += player.accel;
+    if (ax && ay){ ax *= Math.SQRT1_2; ay *= Math.SQRT1_2; }
+    player.vx += ax; player.vy += ay;
+    // friction
+    if (!ax) player.vx *= player.friction;
+    if (!ay) player.vy *= player.friction;
+    // clamp speed
+    const sp = Math.hypot(player.vx, player.vy);
+    if (sp > player.maxSpeed){ const sc = player.maxSpeed/sp; player.vx *= sc; player.vy *= sc; }
+    // kill tiny velocities
+    if (Math.abs(player.vx) < 0.03) player.vx = 0;
+    if (Math.abs(player.vy) < 0.03) player.vy = 0;
+    // update position
+    player.x += player.vx; player.y += player.vy;
+    // clamp to world edges
+    const bound = WORLD.size/2 - 60;
+    player.x = Math.max(-bound, Math.min(bound, player.x));
+    player.y = Math.max(-bound, Math.min(bound, player.y));
+    // draw world + mini-map
+    drawWorld();
+    drawMini();
+    checkProximity();
+    positionTooltip();
+  } else {
+    // still draw background and world to keep visuals
+    drawWorld();
+    drawMini();
+  }
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+
+/* --------------------------- helper: open final complete link (user to set href) --------------------------- */
+/* finalComplete is <a href="#"> - user should replace the href with their final page */
+
+document.addEventListener('visibilitychange', ()=>{ /* keep running */ });
+
+/* --------------------------- initial state: show dialogue */ 
+// start dialogue sequence
+showDialogue(dialogues[0]); dIndex = 1;
+
+/* --------------------------- keyboard convenience: focus on canvas for keys to work on some browsers */
+window.addEventListener('click', ()=>{ /* no-op: just ensure page focused */ });
+
+/* --------------------------- ensure tooltip hides when dialogue or paused --------------------------- */
+setInterval(()=>{ if (state !== 'explore'){ tooltip.style.display = 'none'; } }, 400);
+
+/* --------------------------- end of script --------------------------- */
+</script>
+</body>
+</html>
+

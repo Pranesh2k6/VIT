@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theory - Modulus-Argument</title>
+    <link rel="stylesheet" href="ce-styles.css" />
+</head>
+<body>
+    <div class="top-nav">
+        <a href="ce.html">Missions</a>
+        <a href="ce_theory.html" class="active">Theory</a>
+        <a href="ce_video.html">Video Lesson</a>
+        <a href="ce_examples.html">Example Problems</a>
+    </div>
+
+    <div class="container">
+        <h1>🎯 The Complex Quest II: The Modulus–Argument Saga</h1>
+
+        <div class="dr-neutron">
+            <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+            <p>Ah, Cadet! Ready to unlock the secrets of the Imaginary Realm? Let’s power up your JEE XP!</p>
+        </div>
+
+        <div class="level-box">
+            <h2>🏝️ LEVEL 1: Enter the Modulus Realm</h2>
+            <p>A complex number is $z = a + ib$. It can also be written as $z = r(\cos\theta + i\sin\theta)$. This is the **Modulus–Argument Form (Polar Form)**.</p>
+            <table class="table">
+                <tr><th>Symbol</th><th>Meaning</th></tr>
+                <tr><td>$r$</td><td>**Modulus** = distance from origin $\rightarrow r=\sqrt{a^2 + b^2}$</td></tr>
+                <tr><td>$\theta$</td><td>**Argument** = angle with positive x-axis $\rightarrow \theta = \tan^{-1}\left(\frac{b}{a}\right)$</td></tr>
+            </table>
+            <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>💡 Think of $r$ as power, and $\theta$ as aim of your spell!</p>
+            </div>
+        </div>
+
+        <div class="level-box">
+            <h2>⚙️ LEVEL 2: Locating the Hero (Finding Quadrants)</h2>
+            <p>When finding $\theta$, remember which quadrant you are in:</p>
+            <table class="table">
+                <tr><th>Quadrant</th><th>Sign of $(a, b)$</th><th>$\theta$ range</th><th>Example</th></tr>
+                <tr><td>I</td><td>$(+, +)$</td><td>$0^\circ < \theta < 90^\circ$</td><td>$1+i$</td></tr>
+                <tr><td>II</td><td>$(-, +)$</td><td>$90^\circ < \theta < 180^\circ$</td><td>$-1+i$</td></tr>
+                <tr><td>III</td><td>$(-, -)$</td><td>$180^\circ < \theta < 270^\circ$</td><td>$-1-i$</td></tr>
+                <tr><td>IV</td><td>$(+, -)$</td><td>$270^\circ < \theta < 360^\circ$</td><td>$1-i$</td></tr>
+            </table>
+            <p class="solution-box">💬 **Sage’s Tip**: Always adjust $\theta$ according to the signs of $a$ and $b$ — don’t rely only on $\tan^{-1}$!</p>
+        </div>
+
+        <div class="level-box">
+            <h2>🧭 LEVEL 3: The Polar Portal Opens</h2>
+            <p>You’ve unlocked the Modulus and Argument. Now, express your number in full magical form!</p>
+            <p>🔮 **Polar Representation**: $z=r(\cos\theta+i\sin\theta)$</p>
+            <p>Or using **Euler’s Form**: $z=re^{i\theta}$, where $e^{i\theta}=\cos\theta+i\sin\theta$.</p>
+            <p class="solution-box">💬 **Power-up Move**:<br>Multiplying two complex numbers $\rightarrow$ multiply their moduli, add their arguments.<br>Dividing two $\rightarrow$ divide their moduli, subtract their arguments.</p>
+        </div>
+        
+        <div class="level-box">
+            <h2>⚡ LEVEL 4: The Argument Trap</h2>
+            <p>For a number $z=a+ib$, its argument can be represented as $\arg(z)=\Theta+2n\pi, n\in\mathbb{Z}$.</p>
+            <p>✅ **Principal Argument $(\operatorname{Arg} z)$**: The unique value of $\theta$ between $(-\pi, \pi]$ (or $-180^\circ, 180^\circ]$).</p>
+        </div>
+        
+        <a href="ce.html" class="back-link">← Back to Missions</a>
+    </div>
+</body>
+</html>
