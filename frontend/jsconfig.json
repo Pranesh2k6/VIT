@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    // This tells the editor to treat the folder as a JS project
+    "module": "esnext", 
+    "target": "es2020",
+    "moduleResolution": "node", // Use Node.js module resolution logic
+    "allowJs": true,
+    // Add paths to help resolve imports (optional but helpful)
+    "baseUrl": ".", 
+    "paths": {
+      "firebase/*": ["node_modules/firebase/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

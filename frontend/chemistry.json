@@ -1,0 +1,736 @@
+[
+    {
+      "q_id": 1,
+      "text": "The energy of an electron in the first Bohr orbit of the H-atom is -13.6 eV. The magnitude of energy value of an electron in the first excited state of $Be^{3+}$ is ______ eV (nearest integer value).",
+      "type": "SA",
+      "answer": "54",
+      "elo": 1250,
+      "topic": ["Atomic Structure", "Bohr Model"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 2,
+      "text": "Radius of the first excited state of Helium ion is given as: (a0 → radius of first stationary state of hydrogen atom).",
+      "type": "MCQ",
+      "options": {
+        "A": "$r=\\frac{a_{0}}{4}$",
+        "B": "$r=2a_{0}$",
+        "C": "$r=4a_{0}$",
+        "D": "$r=\\frac{a_{0}}{2}$"
+      },
+      "answer": "B",
+      "elo": 1050,
+      "topic": ["Atomic Structure", "Bohr Model"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 3,
+      "text": "Given below are two statements :\nStatement (I): A spectral line will be observed for a $2p_{x}\\rightarrow2p_{y}$ transition.\nStatement (II): $2p_{x}$ and $2p_{y}$ are degenerate orbitals.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "type": "MCQ",
+      "options": {
+        "A": "Statement I is false but Statement II is true",
+        "B": "Both Statement I and Statement II are false",
+        "C": "Statement I is true but Statement II is false",
+        "D": "Both Statement I and Statement II are true"
+      },
+      "answer": "A",
+      "elo": 1300,
+      "topic": ["Atomic Structure", "Quantum Numbers"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 4,
+      "text": "Heat treatment of muscular pain involves radiation of wavelength of about 900 nm. Which spectral line of H atom is suitable for this? (Given: Rydberg constant $R_{H}=10^{5}cm^{-1}$, $h=6.6\\times10^{-34}J$ s, $c=3\\times10^{8}m/s$)",
+      "type": "MCQ",
+      "options": {
+        "A": "Lyman series, $\\infty\\rightarrow1$",
+        "B": "Balmer series, $\\infty\\rightarrow2$",
+        "C": "Paschen series, $5\\rightarrow3$",
+        "D": "Paschen series, $\\infty\\rightarrow3$"
+      },
+      "answer": "D",
+      "elo": 1400,
+      "topic": ["Atomic Structure", "Hydrogen Spectrum"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 5,
+      "text": "Given below are two statements about X-ray spectra of elements :\nStatement (I): A plot of $\\sqrt{v}$ (v = frequency of X-rays emitted) vs atomic mass is a straight line.\nStatement (II) : A plot of $v$ ($\\nu=$ frequency of X-rays emitted) vs atomic number is a straight line.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "type": "MCQ",
+      "options": {
+        "A": "Statement I is false but Statement II is true",
+        "B": "Both Statement I and Statement II are true",
+        "C": "Statement I is true but Statement II is false",
+        "D": "Both Statement I and Statement II are false"
+      },
+      "answer": "D",
+      "elo": 1500,
+      "topic": ["Atomic Structure", "Moseley's Law"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 6,
+      "text": "Given below are two statements :\nStatement (I) : For a given shell, the total number of allowed orbitals is given by $n^{2}$.\nStatement (II) : For any subshell, the spatial orientation of the orbitals is given by -l to +l values including zero.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "type": "MCQ",
+      "options": {
+        "A": "Both Statement I and Statement II are true",
+        "B": "Both Statement I and Statement II are false",
+        "C": "Statement I is false but Statement II is true",
+        "D": "Statement I is true but Statement II is false"
+      },
+      "answer": "A",
+      "elo": 1100,
+      "topic": ["Atomic Structure", "Quantum Numbers"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 7,
+      "text": "For hydrogen atom, the orbital/s with lowest energy is/are :\n(A) 4s\n(B) $3p_{x}$\n(C) 3 $d_{x^{2}-y^{2}}$\n(D) 3 $d_{z^{2}}$\n(E) $4p_{z}$\nChoose the correct answer from the options given below:",
+      "type": "MCQ",
+      "options": {
+        "A": "(A) only",
+        "B": "(B) only",
+        "C": "(B), (C) and (D) only",
+        "D": "(A) and (E) only"
+      },
+      "answer": "C",
+      "elo": 1200,
+      "topic": ["Atomic Structure", "Quantum Numbers"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 8,
+      "text": "In a multielectron atom, which of the following orbitals described by three quantum numbers will have same energy in absence of electric and magnetic fields?\nA. $n=1$, $l=0$, $m_{l}=0$\nB. $n=2$, $l=0$, $m_{l}=0$\nC. $n=2$, $l=1$, $m_{l}=1$\nD. $n=3$, $l=2$, $m_{l}=1$\nE. $n=3$, $l=2$, $m_{l}=0$\nChoose the correct answer from the options given below:",
+      "type": "MCQ",
+      "options": {
+        "A": "B and C Only",
+        "B": "C and D Only",
+        "C": "A and B Only",
+        "D": "D and E Only"
+      },
+      "answer": "D",
+      "elo": 1350,
+      "topic": ["Atomic Structure", "Quantum Numbers"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 9,
+      "text": "Which of the following is/are not correct with respect to energy of atomic orbitals of hydrogen atom?\n(A) $1s<2p<3d<4s$\n(B) $1s<2s=2p<3s=3p$\n(C) $1s<2s<2p<3s<3p$\n(D) $1s<2s<4s<3d$\nChoose the correct answer from the options given below:",
+      "type": "MCQ",
+      "options": {
+        "A": "(A) and (B) only",
+        "B": "(A) and (C) only",
+        "C": "(B) and (D) only",
+        "D": "(C) and (D) only"
+      },
+      "answer": "D",
+      "elo": 1520,
+      "topic": ["Atomic Structure", "Bohr Model"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 10,
+      "text": "If $a_{0}$ is denoted as the Bohr radius of hydrogen atom, then what is the de-Broglie wavelength ($\\lambda$) of the electron present in the second orbit of hydrogen atom? [n: any integer]",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{8\\pi a_{0}}{n}$",
+        "B": "$2\\pi a_{0}$",
+        "C": "$\\frac{na_{0}}{4\\pi}$",
+        "D": "$\\frac{4\\pi a_{0}}{n}$"
+      },
+      "answer": "A",
+      "elo": 1600,
+      "topic": ["Atomic Structure", "Bohr Model", "de Broglie Wavelength"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 11,
+      "text": "Given below are two statements :\nStatement (I): It is impossible to specify simultaneously with arbitrary precision, both the linear momentum and the position of a particle.\nStatement (II): If the uncertainty in the measurement of position and uncertainty in measurement of momentum are equal for an electron, then the uncertainty in the measurement of velocity is $\\ge\\sqrt{\\frac{h}{\\pi}}\\times\\frac{1}{2m}.$\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "type": "MCQ",
+      "options": {
+        "A": "Statement I is false but Statement II is true",
+        "B": "Both Statement I and Statement II are true",
+        "C": "Both Statement I and Statement II are false",
+        "D": "Statement I is true but Statement II is false"
+      },
+      "answer": "B",
+      "elo": 1540,
+      "topic": ["Atomic Structure", "Heisenberg Uncertainty Principle"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 12,
+      "text": "For hydrogen like species, which of the following graphs provides the most appropriate representation of E vs Z plot for a constant n? [E: Energy of the stationary state, Z: atomic number, $n=$ principal quantum number]",
+      "type": "MCQ",
+      "options": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "answer": "D",
+      "elo": 1620,
+      "topic": ["Atomic Structure", "Bohr Model"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 13,
+      "text": "According to Bohr's model of hydrogen atom, which of the following statement is incorrect?",
+      "type": "MCQ",
+      "options": {
+        "A": "Radius of $4^{th}$ orbit is four times larger than that of 2nd orbit",
+        "B": "Radius of $8^{th}$ orbit is four times larger than that of $4^{th}$ orbit",
+        "C": "Radius of $6^{th}$ orbit is three times larger than that of $4^{th}$ orbit",
+        "D": "Radius of $3^{rd}$ orbit is nine times larger than that of $1^{st}$ orbit"
+      },
+      "answer": "C",
+      "elo": 1150,
+      "topic": ["Atomic Structure", "Bohr Model"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 14,
+      "text": "Which of the following statements are true?\n(A) The subsidiary quantum number l describes the shape of the orbital occupied by the electron.\n(B) [Image shows dumbbell shape along x-axis] is the boundary surface diagram of the $2p_{x}$ orbital.\n(C) The + and - signs in the wave function of the $2p_{x}$ orbital refer to charge.\n(D) The wave function of $2p_{x}$ orbital is zero everywhere in the xy plane.\nChoose the correct answer from the options given below:",
+      "type": "MCQ",
+      "options": {
+        "A": "(A) and (B) only",
+        "B": "(B) and (D) only",
+        "C": "(C) and (D) only",
+        "D": "(A), (B) and (C) only"
+      },
+      "answer": "A",
+      "elo": 1370,
+      "topic": ["Atomic Structure", "Quantum Numbers", "Orbitals"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 15,
+      "text": "Which of the following postulate of Bohr's model of hydrogen atom is not in agreement with quantum mechanical model of an atom?",
+      "type": "MCQ",
+      "options": {
+        "A": "The electron in a H atom's stationary state moves in a circle around the nucleus.",
+        "B": "An atom can take only certain distinct energies $E_{1}$, $E_{2}$, $E_{3}$, etc. These allowed states of constant energy are called the stationary states of atom.",
+        "C": "An atom in a stationary state does not emit electromagnetic radiation as long as it stays in the same state.",
+        "D": "When an electron makes a transition from a higher energy stationary state to a lower energy stationary state, then it emits a photon of light."
+      },
+      "answer": "A",
+      "elo": 1420,
+      "topic": ["Atomic Structure", "Bohr Model", "Quantum Mechanics"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 16,
+      "text": "For electrons in '2 s' and ' 2 p' orbitals, the orbital angular momentum values, respectively are :",
+      "type": "MCQ",
+      "options": {
+        "A": "0 and $\\sqrt{6}\\frac{h}{2\\pi}$",
+        "B": "0 and $\\sqrt{2}\\frac{h}{2\\pi}$",
+        "C": "$\\sqrt{2}\\frac{h}{2\\pi}$ and 0",
+        "D": "$\\frac{h}{2\\pi}$ and $\\sqrt{2}\\frac{h}{2\\pi}$"
+      },
+      "answer": "B",
+      "elo": 1180,
+      "topic": ["Atomic Structure", "Quantum Numbers"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 17,
+      "text": "Which one of the following about an electron occupying the 1 s orbital in a hydrogen atom is incorrect? (Bohr's radius is represented by ao)",
+      "type": "MCQ",
+      "options": {
+        "A": "The probability density of finding the electron is maximum at the nucleus",
+        "B": "The total energy of the electron is maximum when it is at a distance $a_{0}$ from the nucleus",
+        "C": "The electron can be found at a distance $2a_{0}$ from the nucleus",
+        "D": "The 1 s orbital is spherically symmetrical"
+      },
+      "answer": "B",
+      "elo": 1450,
+      "topic": ["Atomic Structure", "Orbitals", "Quantum Mechanics"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 18,
+      "text": "Consider the ground state of chromium atom $(Z=24)$. How many electrons are with Azimuthal quantum number $l=1$ and $l=2$ respectively ?",
+      "type": "MCQ",
+      "options": {
+        "A": "16 and 5",
+        "B": "12 and 5",
+        "C": "12 and 4",
+        "D": "16 and 4"
+      },
+      "answer": "B",
+      "elo": 1330,
+      "topic": ["Atomic Structure", "Electronic Configuration", "Quantum Numbers"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 19,
+      "text": "Which of the following statements are correct, if the threshold frequency of caesium is $5.16\\times10^{14}$ Hz ?\nA. When Cs is placed inside a vacuum chamber with an ammeter connected to it and yellow light is focused on Cs, the ammeter shows the presence of current.\nB. When the brightness of the yellow light is dimmed, the value of the current in the ammeter is reduced.\nC. When a red light is used instead of the yellow light, the current produced is higher with respect to the yellow light.\nD. When a blue light is used, the ammeter shows the formation of current.\nE. When a white light is used. the ammeter shows formation of current.\nChoose the correct answer from the options given below:",
+      "type": "MCQ",
+      "options": {
+        "A": "B, C and D Only",
+        "B": "A, C, D and E Only",
+        "C": "A, B, D and E Only",
+        "D": "A, D and E Only"
+      },
+      "answer": "C",
+      "elo": 1650,
+      "topic": ["Atomic Structure", "Photoelectric Effect"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 20,
+      "text": "The extra stability of half-filled subshell is due to :\n(A) Symmetrical distribution of electrons\n(B) Smaller coulombic repulsion energy\n(C) The presence of electrons with the same spin in non-degenerate orbitals\n(D) Larger exchange energy\n(E) Relatively smaller shielding of electrons by one another\nIdentify the correct statements :",
+      "type": "MCQ",
+      "options": {
+        "A": "(B), (D) and (E) only",
+        "B": "(A), (B), (D) and (E) only",
+        "C": "(B), (C) and (D) only",
+        "D": "(A), (B) and (D) only"
+      },
+      "answer": "B",
+      "elo": 1560,
+      "topic": ["Atomic Structure", "Electronic Configuration"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 21,
+      "text": "Correct statements for an element with atomic number 9 are:\nA. There can be 5 electrons for which $m_{s}=+\\frac{1}{2}$ and 4 electrons for which $m_{s}=-\\frac{1}{2}$.\nB. There is only one electron in $p_{z}$ orbital.\nC. The last electron goes to orbital with $n=2$ and $l=1$.\nD. The sum of angular nodes of all the atomic orbitals is 1.\nChoose the correct answer from the options given below:",
+      "type": "MCQ",
+      "options": {
+        "A": "A and B Only",
+        "B": "A, C and D Only",
+        "C": "A and C Only",
+        "D": "C and D Only"
+      },
+      "answer": "C",
+      "elo": 1580,
+      "topic": ["Atomic Structure", "Electronic Configuration", "Quantum Numbers", "Orbitals"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 22,
+      "text": "Which of the following electronic configuration would be associated with the highest magnetic moment?",
+      "type": "MCQ",
+      "options": {
+        "A": "[Ar]3d7",
+        "B": "[Ar]3d8",
+        "C": "$[Ar]3d^{3}$",
+        "D": "[Ar]3d6"
+      },
+      "answer": "D",
+      "elo": 1280,
+      "topic": ["Atomic Structure", "Electronic Configuration", "Magnetic Moment"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+     {
+      "q_id": 23,
+      "text": "Consider the following complex ions\nP=$[FeF_{6}]^{3-}$\nQ=$[V(H_{2}O)_{6}]^{2+}$\nR=$[Fe(H_{2}O)_{6}]^{2+}$\nThe correct order of the complex ions, according to their spin only magnetic moment values (in B.M.) is :",
+      "type": "MCQ",
+      "options": {
+        "A": "$R<Q<P$",
+        "B": "$R<P<Q$",
+        "C": "$Q<R<P$",
+        "D": "$Q<P<R$"
+      },
+      "answer": "C",
+      "elo": 1670,
+      "topic": ["Coordination Chemistry", "Atomic Structure", "Magnetic Moment"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 24,
+      "text": "The electronic configuration for Neodymium is: [Atomic Number for Neodymium 60]",
+      "type": "MCQ",
+      "options": {
+        "A": "[Xe]4f46 s2",
+        "B": "[Xe]5f47 s²",
+        "C": "[Xe]4f66 s2",
+        "D": "[Xe]4f5d16 s2"
+      },
+      "answer": "A",
+      "elo": 1410,
+      "topic": ["Atomic Structure", "Electronic Configuration"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 25,
+      "text": "The number of electrons present in all the completely filled subshells having $n=4$ and $s=+1/2$ is ______. (Where $n=$ principal quantum number and $s=$ spin quantum number)",
+      "type": "SA",
+      "answer": "16",
+      "elo": 1570,
+      "topic": ["Atomic Structure", "Quantum Numbers", "Electronic Configuration"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 26,
+      "text": "Total number of ions from the following with noble gas configuration is ______.\n$Sr^{2+}(Z=38)$, $Cs^{+}(Z=55)$, $La^{2+}(Z=57)$, $Pb^{2+}(Z=82)$, $Yb^{2+}(Z=70)$ and $Fe^{2+}(Z=26)$",
+      "type": "SA",
+      "answer": "2",
+      "elo": 1430,
+      "topic": ["Atomic Structure", "Electronic Configuration"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 27,
+      "text": "The correct set of four quantum numbers for the valence electron of rubidium atom $(Z=37)$ is:",
+      "type": "MCQ",
+      "options": {
+        "A": "5, 0, 0, $+1/2$",
+        "B": "5, 0, $1,+1/2$",
+        "C": "$5,1,0,+1/2$",
+        "D": "5, 1, $1,+1/2$"
+      },
+      "answer": "A",
+      "elo": 1020,
+      "topic": ["Atomic Structure", "Quantum Numbers", "Electronic Configuration"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 28,
+      "text": "Choose the correct answer from the options given below :-\nList I (Spectral Series for Hydrogen) vs List II (Spectral Region Higher)\nA. Lyman I. Infrared region\nB. Balmer II. UV region\nC. Paschen III. Infrared region\nD. Pfund IV. Visible region",
+      "type": "MCQ",
+      "options": {
+        "A": "A-II, B-III, C-I, D-IV",
+        "B": "A-I, B-III, C-II, D-IV",
+        "C": "A-II, B-IV, C-III, D-I",
+        "D": "A-I, B-II, C-III, D-IV"
+      },
+      "answer": "C",
+      "elo": 1040,
+      "topic": ["Atomic Structure", "Hydrogen Spectrum"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 29,
+      "text": "Given below are two statements:\nStatement-I: The orbitals having same energy are called as degenerate orbitals.\nStatement-II: In hydrogen atom, 3p and 3d orbitals are not degenerate orbitals.\nIn the light of the above statements, choose the most appropriate answer from the options given",
+      "type": "MCQ",
+      "options": {
+        "A": "Statement-I is true but Statement-II is false",
+        "B": "Both Statement-I and Statement-II are true.",
+        "C": "Both Statement-I and Statement-II are false",
+        "D": "Statement-I is false but Statement-II is true"
+      },
+      "answer": "A",
+      "elo": 1240,
+      "topic": ["Atomic Structure", "Quantum Numbers", "Orbitals"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 30,
+      "text": "Number of spectral lines obtained in He+ spectra, when an electron makes transition from fifth excited state to first excited state will be ______.",
+      "type": "SA",
+      "answer": "10",
+      "elo": 1440,
+      "topic": ["Atomic Structure", "Hydrogen Spectrum"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 31,
+      "text": "The ionization energy of sodium in kJmol⁻¹. If electromagnetic radiation of wavelength 242 nm is just sufficient to ionize sodium atom is ______.",
+      "type": "SA",
+      "answer": "494",
+      "elo": 1590,
+      "topic": ["Atomic Structure", "Photoelectric Effect"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 32,
+      "text": "The four quantum numbers for the electron in the outer most orbital of potassium (atomic no. 19) are",
+      "type": "MCQ",
+      "options": {
+        "A": "$n=4, l=2, m=-1, s=+1/2$",
+        "B": "$n=4, l=0, m=0, s=+1/2$",
+        "C": "$n=3, l=0, m=1, s=+1/2$",
+        "D": "$n=2, l=0, m=0, s=+1/2$"
+      },
+      "answer": "B",
+      "elo": 1060,
+      "topic": ["Atomic Structure", "Quantum Numbers", "Electronic Configuration"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 33,
+      "text": "According to the wave-particle duality of matter by de-Broglie, which of the following graph plot presents most appropriate relationship between wavelength of electron ($\\lambda$) and momentum of electron (p) ?",
+      "type": "MCQ",
+      "options": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "answer": "A",
+      "elo": 1260,
+      "topic": ["Atomic Structure", "de Broglie Wavelength"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 34,
+      "text": "The number of radial node/s for 3p orbital is:",
+      "type": "MCQ",
+      "options": {
+        "A": "1",
+        "B": "4",
+        "C": "2",
+        "D": "3"
+      },
+      "answer": "A",
+      "elo": 1070,
+      "topic": ["Atomic Structure", "Orbitals", "Quantum Numbers"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 35,
+      "text": "It is observed that characteristic X-ray spectra of elements show regularity. When frequency to the power 'n' i.e. $v^{n}$ of X-rays emitted is plotted against atomic number 'Z', following graph is obtained. . The value of 'n' is",
+      "type": "MCQ",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "$\\frac{1}{2}$",
+        "D": "3"
+      },
+      "answer": "C",
+      "elo": 1610,
+      "topic": ["Atomic Structure", "Moseley's Law"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 36,
+      "text": "If wavelength of the first line of the Paschen series of hydrogen atom is 720 nm, then the wavelength of the second line of this series is ______ nm (Nearest integer)",
+      "type": "SA",
+      "answer": "492",
+      "elo": 1630,
+      "topic": ["Atomic Structure", "Hydrogen Spectrum"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 37,
+      "text": "The number of s-electrons present in an ion with 55 protons in its unipositive state is",
+      "type": "MCQ",
+      "options": {
+        "A": "8",
+        "B": "9",
+        "C": "12",
+        "D": "10"
+      },
+      "answer": "D",
+      "elo": 1160,
+      "topic": ["Atomic Structure", "Electronic Configuration"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 38,
+      "text": "The radius of the $2^{nd}$ orbit of $Li^{2+}$ is x. The expected radius of the $3^{rd}$ orbit of $Be^{3+}$ is",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{9}{4}x$",
+        "B": "$\\frac{4}{9}x$",
+        "C": "$\\frac{27}{16}x$",
+        "D": "$\\frac{16}{27}x$"
+      },
+      "answer": "C",
+      "elo": 1640,
+      "topic": ["Atomic Structure", "Bohr Model"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 39,
+      "text": "How many of the following metal ions have similar value of spin only magnetic moment in gaseous state? $V^{3+}$, $Cr^{3+}$, $Fe^{2+}$, $Ni^{3+}$ (Given: Atomic number: V, 23; Cr, 24; Fe, 26; $Ni,$ 28)",
+      "type": "SA",
+      "answer": "2",
+      "elo": 1660,
+      "topic": ["Atomic Structure", "Magnetic Moment", "Electronic Configuration"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 40,
+      "text": "The shortest wavelength of hydrogen atom in Lyman series is $\\lambda$. The longest wavelength in Balmer series of He+ is",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{5}{9\\lambda}$",
+        "B": "$\\frac{9\\lambda}{5}$",
+        "C": "$\\frac{36\\lambda}{5}$",
+        "D": "$\\frac{5\\lambda}{9}$"
+      },
+      "answer": "B",
+      "elo": 1680,
+      "topic": ["Atomic Structure", "Hydrogen Spectrum"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 41,
+      "text": "Assume that the radius of the first Bohr orbit of hydrogen atom is 0.6Å. The radius of the third Bohr orbit of He+ is ______ picometer. (Nearest Integer)",
+      "type": "SA",
+      "answer": "270",
+      "elo": 1270,
+      "topic": ["Atomic Structure", "Bohr Model"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 42,
+      "text": "The energy of one mole of photons of radiation of frequency $2\\times10^{12}Hz$ in $Jmol^{-1}$ is ______ (Nearest integer). (Given: $h=6.626\\times10^{-34}Js$, $N_{A}=6.022\\times10^{23}mol^{-1})$",
+      "type": "SA",
+      "answer": "798",
+      "elo": 1290,
+      "topic": ["Atomic Structure", "Quantum Theory"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 43,
+      "text": "Maximum number of electrons that can be accommodated in shell with $n=4$ are:",
+      "type": "MCQ",
+      "options": {
+        "A": "16",
+        "B": "32",
+        "C": "50",
+        "D": "72"
+      },
+      "answer": "B",
+      "elo": 1090,
+      "topic": ["Atomic Structure", "Quantum Numbers"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 44,
+      "text": "The wave function (Ψ) of 2 s is given by $\\Psi_{2,s}=\\frac{1}{2\\sqrt{2\\pi}}(\\frac{1}{a_{0}})^{1/2}(2-\\frac{r}{a_{0}})e^{-r/2a_{0}}$. At $r=r_{0}$, radial node is formed. Thus, $r_{0}$ in terms of $a_{0}$ is",
+      "type": "MCQ",
+      "options": {
+        "A": "$r_{0}=a_{0}$",
+        "B": "$r_{0}=4a_{0}$",
+        "C": "$r_{0}=\\frac{a_{0}}{2}$",
+        "D": "$r_{0}=2a_{0}$"
+      },
+      "answer": "D",
+      "elo": 1490,
+      "topic": ["Atomic Structure", "Quantum Mechanics", "Orbitals"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 45,
+      "text": "Which transition in the hydrogen spectrum would have the same wavelength as the Balmer type transition from $n=4$ to $n=2$ of He+ spectrum",
+      "type": "MCQ",
+      "options": {
+        "A": "$n=2$ to $n=1$",
+        "B": "$n=1$ to $n=3$",
+        "C": "$n=1$ to $n=2$",
+        "D": "$n=3$ to $n=4$"
+      },
+      "answer": "A",
+      "elo": 1700,
+      "topic": ["Atomic Structure", "Hydrogen Spectrum"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 46,
+      "text": "Arrange the following orbitals in decreasing order of energy?\n(A) $n=3$, $l=0$, $m=0$\n(B) $n=4$, $l=0$, $m=0$\n(C) $n=3$, $l=1$, $m=0$\n(D) $n=3$, $l=2$, $m=1$\nThe correct option for the order is :",
+      "type": "MCQ",
+      "options": {
+        "A": "$B>D>C>A$",
+        "B": "$D>B>C>A$",
+        "C": "$A>C>B>D$",
+        "D": "$D>B>A>C$"
+      },
+      "answer": "B",
+      "elo": 1310,
+      "topic": ["Atomic Structure", "Quantum Numbers", "Orbitals"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 47,
+      "text": "Electrons in a cathode ray tube have been emitted with a velocity of $1000ms^{-1}$. The number of following statements which is/are true about the emitted radiation is ______. Given : $h=6\\times10^{-34}Js$, $m_{e}=9\\times10^{-31}kg$.\n(A) The deBroglie wavelength of the electron emitted is 666.67 nm.\n(B) The characteristic of electrons emitted depend upon the material of the electrodes of the cathode ray tube.\n(C) The cathode rays start from cathode and move towards anode.\n(D) The nature of the emitted electrons depends on the nature of the gas present in cathode ray tube.",
+      "type": "SA",
+      "answer": "2",
+      "elo": 1690,
+      "topic": ["Atomic Structure", "Cathode Rays", "de Broglie Wavelength"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 48,
+      "text": "Which one of the following sets of ions represents a collection of isoelectronic species? (Given: Atomic Number: F : 9, Cl : 17, $Na=11$, $Mg=12$, $Al=13$, $K=19$, $Ca=20$, $Sc=21$)",
+      "type": "MCQ",
+      "options": {
+        "A": "Li+, $Na^{+}$, $Mg^{2+}$, $Ca^{2+}$",
+        "B": "$Ba^{2+}$, $Sr^{2+}$, $K+$, $Ca^{2+}$",
+        "C": "$N^{3-}$, $O^{2-}$, $F^{-},$ $S^{2-}$",
+        "D": "$K^{+}$, Cl⁻, $Ca^{2+}$, $Sc^{3+}$"
+      },
+      "answer": "D",
+      "elo": 1190,
+      "topic": ["Atomic Structure", "Electronic Configuration"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 49,
+      "text": "The wavelength of an electron of kinetic energy $4.50\\times10^{-29}J$ is ______ $\\times10^{-5}m.$ (Nearest integer). Given : mass of electron is $9\\times10^{-31}kg$, $h=6.6\\times10^{-34}J~s$",
+      "type": "SA",
+      "answer": "7",
+      "elo": 1530,
+      "topic": ["Atomic Structure", "de Broglie Wavelength"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 50,
+      "text": "If the radius of the first orbit of hydrogen atom $a_{0}$, then de Broglie's wavelength of electron in $3^{rd}$ orbit is",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{\\pi a_{0}}{6}$",
+        "B": "$\\frac{\\pi a_{0}}{3}$",
+        "C": "$6\\pi a_{0}$",
+        "D": "$3\\pi a_{0}$"
+      },
+      "answer": "C",
+      "elo": 1550,
+      "topic": ["Atomic Structure", "Bohr Model", "de Broglie Wavelength"],
+      "subject": "Chemistry",
+      "difficulty_initial": "Hard"
+    }
+  ]

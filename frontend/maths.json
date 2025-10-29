@@ -1,0 +1,706 @@
+[
+    {
+      "q_id": 1,
+      "text": "Let $\\alpha$, $\\beta$ be the roots of the equation $x^{2}-ax-b=0$ with $Im(\\alpha)<Im(\\beta)$. Let $P_{n}=\\alpha^{n}-\\beta^{n}.$ If $P_{3}=-5\\sqrt{7}i$, $P_{4}=-3\\sqrt{7}i$, $P_{5}=11\\sqrt{7}i$ and $P_{6}=45\\sqrt{7}i$, then $\\alpha^{4}+\\beta^{4}$ is equal to",
+      "type": "SA",
+      "answer": "31",
+      "elo": 1700,
+      "topic": ["Quadratic Equations", "Complex Numbers", "Roots of Equations"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 2,
+      "text": "Let integers a, $b\\in[-3,3]$ be such that $a+b\\ne0$. Then the number of all possible ordered pairs (a, b), for which $|\\frac{z-a}{z+b}|=1$ and $|\\begin{vmatrix} z+1 & \\omega & \\omega^{2} \\\\ \\omega & z+\\omega^{2} & 1 \\\\ \\omega^{2} & 1 & z+\\omega \\end{vmatrix}|=1$ for some $z\\in C$ where $\\omega$ and $\\omega^{2}$ are the roots of $x^{2}+x+1=0$ is equal to",
+      "type": "SA",
+      "answer": "10",
+      "elo": 1750,
+      "topic": ["Complex Numbers", "Properties of Complex Numbers", "Cube Roots of Unity", "Determinants"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 3,
+      "text": "Let $A=\\{z\\in C:|z-2-i|=3\\}$, $B=\\{z\\in C:Re(z-iz)=2\\}$ and $S=A\\cap B$. Then $\\sum_{z\\in S}|z|^{2}$ is equal to",
+      "type": "SA",
+      "answer": "22",
+      "elo": 1650,
+      "topic": ["Complex Numbers", "Locus", "Circles"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 4,
+      "text": "If $\\alpha$ is a root of the equation $x^{2}+x+1=0$ and $\\sum_{k=1}^{n}(\\alpha^{k}+\\frac{1}{\\alpha^{k}})^{2}=20,$ then n is equal to",
+      "type": "SA",
+      "answer": "11",
+      "elo": 1600,
+      "topic": ["Complex Numbers", "Cube Roots of Unity", "Quadratic Equations", "Series"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 5,
+      "text": "Let $z_{1}$, $z_{2}$ and $z_{3}$ be three complex numbers on the circle $|z|=1$ with $arg(z_{1})=\\frac{-\\pi}{4}$, $arg(z_{2})=0$ and $arg(z_{3})=\\frac{\\pi}{4}$. If $|z_{1}\\overline{z}_{2}+z_{2}\\overline{z}_{3}+z_{3}\\overline{z}_{1}|^{2}=\\alpha+\\beta\\sqrt{2},$ $\\alpha, \\beta\\in Z$ then the value of $\\alpha^{2}+\\beta^{2}$ is :",
+      "type": "MCQ",
+      "options": {
+        "A": "41",
+        "B": "29",
+        "C": "24",
+        "D": "31"
+      },
+      "answer": "B",
+      "elo": 1550,
+      "topic": ["Complex Numbers", "Modulus", "Argument", "Properties of Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 6,
+      "text": "Let the curve $z(1+i)+\\overline{z}(1-i)=4$, $z\\in C$, divide the region $|z-3|\\le1$ into two parts of areas $\\alpha$ and $\\beta$. Then $|\\alpha-\\beta|$ equals :",
+      "type": "MCQ",
+      "options": {
+        "A": "$1+\\frac{\\pi}{3}$",
+        "B": "$1+\\frac{\\pi}{6}$",
+        "C": "$1+\\frac{\\pi}{2}$",
+        "D": "$1+\\frac{\\pi}{4}$"
+      },
+      "answer": "C",
+      "elo": 1620,
+      "topic": ["Complex Numbers", "Locus", "Circles", "Area Calculation"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 7,
+      "text": "Let $|\\frac{\\overline{z}-i}{2\\overline{z}+i}|=\\frac{1}{3}$, $z\\in C$ be the equation of a circle with center at C. If the area of the triangle, whose vertices are at the points $(0,0)$, C and $(\\alpha,0)$ is 11 square units, then $\\alpha^{2}$ equals:",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{121}{25}$",
+        "B": "100",
+        "C": "$\\frac{81}{25}$",
+        "D": "50"
+      },
+      "answer": "B",
+      "elo": 1640,
+      "topic": ["Complex Numbers", "Locus", "Circles", "Coordinate Geometry"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 8,
+      "text": "The number of complex numbers z, satisfying $|z|=1$ and $|\\frac{z}{\\overline{z}}+\\frac{\\overline{z}}{z}|=1$, is:",
+      "type": "MCQ",
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "4",
+        "D": "6"
+      },
+      "answer": "A",
+      "elo": 1580,
+      "topic": ["Complex Numbers", "Properties of Complex Numbers", "Modulus"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 9,
+      "text": "If $\\alpha$ and $\\beta$ are the roots of the equation $2z^{2}-3z-2i=0,$ where $i=\\sqrt{-1},$ then $16 \\times Re (\\frac{\\alpha^{19}+\\beta^{19}+\\alpha^{11}+\\beta^{11}}{\\alpha^{15}+\\beta^{15}}) \\times Im(\\frac{\\alpha^{19}+\\beta^{19}+\\alpha^{11}+\\beta^{11}}{\\alpha^{15}+\\beta^{15}})$ is equal to",
+      "type": "MCQ",
+      "options": {
+        "A": "441",
+        "B": "312",
+        "C": "409",
+        "D": "398"
+      },
+      "answer": "A",
+      "elo": 1720,
+      "topic": ["Quadratic Equations", "Complex Numbers", "Roots of Equations"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 10,
+      "text": "Let O be the origin, the point A be $z_{1}=\\sqrt{3}+2\\sqrt{2}i$ , the point $B(z_{2})$ be such that $\\sqrt{3}|z_{2}|=|z_{1}|$ and $arg (z_{2})=arg(z_{1})+\\frac{\\pi}{6}$. Then",
+      "type": "MCQ",
+      "options": {
+        "A": "area of triangle ABO is $\\frac{11}{4}$",
+        "B": "area of triangle ABO is $\\frac{11}{\\sqrt{3}}$",
+        "C": "ABO is a scalene triangle",
+        "D": "ABO is an obtuse angled isosceles triangle"
+      },
+      "answer": "D",
+      "elo": 1660,
+      "topic": ["Complex Numbers", "Geometry with Complex Numbers", "Argument", "Modulus"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 11,
+      "text": "If $\\alpha+i\\beta$ and $\\gamma+i\\delta$ are the roots of $x^{2}-(3-2i)x-(2i-2)=0$, $i=\\sqrt{-1},$ then $\\alpha\\gamma+\\beta\\delta$ is equal to:",
+      "type": "MCQ",
+      "options": {
+        "A": "2",
+        "B": "-6",
+        "C": "6",
+        "D": "-2"
+      },
+      "answer": "A",
+      "elo": 1400,
+      "topic": ["Quadratic Equations", "Complex Numbers", "Roots of Equations"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 12,
+      "text": "Let $|z_{1}-8-2i|\\le1$ and $|z_{2}-2+6i|\\le2.$, $z_{1}, z_{2}\\in\\mathbb{C}.$ Then the minimum value of $|z_{1}-z_{2}|$ is:",
+      "type": "MCQ",
+      "options": {
+        "A": "3",
+        "B": "10",
+        "C": "7",
+        "D": "13"
+      },
+      "answer": "C",
+      "elo": 1350,
+      "topic": ["Complex Numbers", "Geometry with Complex Numbers", "Circles"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 13,
+      "text": "Let z be a complex number such that $|z|=1$. If $\\frac{2+k^{2}z}{k+\\overline{z}}=kz,$ $k\\in R$, then the maximum distance of $k+ik^{2}$ from the circle $|z-(1+2i)|=1$ is :",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\sqrt{5}+1$",
+        "B": "3",
+        "C": "$\\sqrt{3}+1$",
+        "D": "2"
+      },
+      "answer": "A",
+      "elo": 1670,
+      "topic": ["Complex Numbers", "Properties of Complex Numbers", "Geometry with Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 14,
+      "text": "Let $z\\in C$ be such that $\\frac{z^{2}+3i}{z-2+i}=2+3i.$ Then the sum of all possible values of $z^{2}$ is:",
+      "type": "MCQ",
+      "options": {
+        "A": "-19+2i",
+        "B": "-19-2i",
+        "C": "19-2i",
+        "D": "19+2i"
+      },
+      "answer": "B",
+      "elo": 1450,
+      "topic": ["Complex Numbers", "Quadratic Equations"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 15,
+      "text": "If $z_{1}, z_{2}, z_{3}$ are the vertices of an equilateral triangle, whose centroid is $z_{0}$, then $\\sum_{k=1}^{3}(z_{k}-z_{0})^{2}$ is equal to",
+      "type": "MCQ",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "i",
+        "D": "-i"
+      },
+      "answer": "A",
+      "elo": 1480,
+      "topic": ["Complex Numbers", "Geometry with Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 16,
+      "text": "Let the product of $\\omega_{1}=(8+i)sin~\\theta+(7+4i)cos~\\theta$ and $\\omega_{2}=(1+8i)sin~\\theta+(4+7i)cos~\\theta$ be $\\alpha+i\\beta$, $i=\\sqrt{-1}.$ Let p and q be the maximum and the minimum values of $\\alpha+\\beta$ respectively. Then $p+q$ is equal to:",
+      "type": "MCQ",
+      "options": {
+        "A": "130",
+        "B": "150",
+        "C": "160",
+        "D": "140"
+      },
+      "answer": "A",
+      "elo": 1710,
+      "topic": ["Complex Numbers", "Trigonometry"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 17,
+      "text": "Among the statements\n(S1): The set $\\{z\\in\\mathbb{C}-\\{-i\\}:|z|=1$ and $\\frac{z-i}{z+i}$ is purely real \\} contains exactly two elements, and\n(S2): The set $\\{z\\in\\mathbb{C}-\\{-1\\}:|z|=1$ and $\\frac{z-1}{z+1}$ is purely imaginary \\} contains infinitely many elements.",
+      "type": "MCQ",
+      "options": {
+        "A": "both are incorrect",
+        "B": "both are correct",
+        "C": "only (S2) is correct",
+        "D": "only (S1) is correct"
+      },
+      "answer": "C",
+      "elo": 1560,
+      "topic": ["Complex Numbers", "Properties of Complex Numbers", "Locus"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 18,
+      "text": "If the locus of $z\\in\\mathbb{C},$ such that $Re(\\frac{z-1}{2z+i})+Re(\\frac{\\overline{z}-1}{2\\overline{z}-i})=2.$ is a circle of radius r and center $(a,b)$, then $\\frac{15ab}{r^{2}}$ is equal to :",
+      "type": "MCQ",
+      "options": {
+        "A": "16",
+        "B": "24",
+        "C": "12",
+        "D": "18"
+      },
+      "answer": "D",
+      "elo": 1690,
+      "topic": ["Complex Numbers", "Locus", "Circles"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 19,
+      "text": "Let $A=\\{\\theta\\in[0,2\\pi]:1+10~Re(\\frac{2~cos~\\theta+i~sin~\\theta}{cos~\\theta-3i~sin~\\theta})=0\\}$. Then $\\sum_{\\theta\\in A}\\theta^{2}$ is equal to",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{21}{4}\\pi^{2}$",
+        "B": "$6\\pi^{2}$",
+        "C": "$\\frac{27}{4}\\pi^{2}$",
+        "D": "$8\\pi^{2}$"
+      },
+      "answer": "A",
+      "elo": 1730,
+      "topic": ["Complex Numbers", "Trigonometry", "Properties of Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 20,
+      "text": "If S = {z $\\in$ C: |z - i| = |z + i| = |z - 1|}, then, n(S) is:",
+      "type": "MCQ",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "3",
+        "D": "2"
+      },
+      "answer": "A",
+      "elo": 1320,
+      "topic": ["Complex Numbers", "Locus", "Geometry with Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 21,
+      "text": "If $\\alpha$ satisfies the equation $x^{2}+x+1=0$ and $(1+\\alpha)^{7}=A+B\\alpha+C\\alpha^{2}$ A, B, $C\\ge0,$ then $5(3A-2B-C)$ is equal to",
+      "type": "SA",
+      "answer": "5",
+      "elo": 1460,
+      "topic": ["Complex Numbers", "Cube Roots of Unity"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 22,
+      "text": "Let the complex numbers $\\alpha$ and $1/\\overline{\\alpha}$ lie on the circles $|z-z_{0}|^{2}=4$ and $|z-z_{0}|^{2}=16$ respectively, where $z_{0}=1+i$. Then, the value of 100 $|\\alpha|^{2}$ is.",
+      "type": "SA",
+      "answer": "20",
+      "elo": 1740,
+      "topic": ["Complex Numbers", "Circles", "Properties of Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 23,
+      "text": "If $\\alpha, \\beta$ are the roots of the equation, $x^{2}-x-1=0$ and $S_{n}=2023\\alpha^{n}+2024\\beta^{n}$, then",
+      "type": "MCQ",
+      "options": {
+        "A": "$2S_{12}=S_{11}+S_{10}$",
+        "B": "$S_{12}=S_{11}+S_{10}$",
+        "C": "$2S_{11}=S_{12}+S_{10}$",
+        "D": "$S_{11}=S_{10}+S_{12}$"
+      },
+      "answer": "B",
+      "elo": 1510,
+      "topic": ["Quadratic Equations", "Roots of Equations", "Recurrence Relations"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 24,
+      "text": "If $z=\\frac{1}{2}-2i,$ is such that $|z+1|=\\alpha z+\\beta(1+i),$ $i=\\sqrt{-1}$ and $\\alpha, \\beta\\in R$, then $\\alpha+\\beta$ is equal to",
+      "type": "MCQ",
+      "options": {
+        "A": "-4",
+        "B": "3",
+        "C": "2",
+        "D": "-1"
+      },
+      "answer": "B",
+      "elo": 1340,
+      "topic": ["Complex Numbers", "Properties of Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 25,
+      "text": "Let $\\alpha, \\beta$ be the roots of the equation $x^{2}-x+2=0$ with $Im(\\alpha)>Im(\\beta)$. Then $\\alpha^{6}+\\alpha^{4}+\\beta^{4}-5\\alpha^{2}$ is equal to",
+      "type": "SA",
+      "answer": "13",
+      "elo": 1610,
+      "topic": ["Quadratic Equations", "Complex Numbers", "Roots of Equations"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 26,
+      "text": "Let r and $\\theta$ respectively be the modulus and amplitude of the complex number $z=2-i(2~tan~5\\pi/8)$, then (r, $\\theta$) is equal to",
+      "type": "MCQ",
+      "options": {
+        "A": "$(2~sec\\frac{3\\pi}{8},\\frac{3\\pi}{8})$",
+        "B": "$(2~sec\\frac{3\\pi}{8},\\frac{5\\pi}{8})$",
+        "C": "$(2~sec\\frac{5\\pi}{8},\\frac{3\\pi}{8})$",
+        "D": "$(2~sec\\frac{11\\pi}{8},\\frac{11\\pi}{8})$"
+      },
+      "answer": "A",
+      "elo": 1570,
+      "topic": ["Complex Numbers", "Modulus", "Argument", "Polar Form"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 27,
+      "text": "Let $\\alpha,\\beta$ be the roots of the equation $x^{2}-\\sqrt{6}x+3=0$ such that $Im(\\alpha)>Im(\\beta)$. Let a,b be integers not divisible by 3 and n be a natural number such that $\\frac{\\alpha^{99}}{\\beta}+\\alpha^{98}=3^{n}(a+ib),i=\\sqrt{-1}$. Then $n+a+b$ is equal to",
+      "type": "SA",
+      "answer": "49",
+      "elo": 1760,
+      "topic": ["Quadratic Equations", "Complex Numbers", "Roots of Equations", "De Moivre's Theorem"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 28,
+      "text": "Let the set $C = \\{(x, y) | x^{2}-2^{y}=2023, x, y \\in N\\}$. Then $\\sum_{(x,y)\\in C}(x+y)$ is equal to",
+      "type": "SA",
+      "answer": "46",
+      "elo": 1470,
+      "topic": ["Number Theory", "Diophantine Equations"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 29,
+      "text": "If $z=x+iy$, $xy\\ne0$ satisfies the equation $z^{2}+i\\overline{z}=0,$ then $|z|^{2}$ is equal to:",
+      "type": "MCQ",
+      "options": {
+        "A": "9",
+        "B": "1",
+        "C": "4",
+        "D": "1/4"
+      },
+      "answer": "B",
+      "elo": 1100,
+      "topic": ["Complex Numbers", "Properties of Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 30,
+      "text": "If z is a complex number, then the number of common roots of the equation $z^{1985}+z^{100}+1=0$ and $z^{3}+2z^{2}+2z+1=0,$ is equal to :",
+      "type": "MCQ",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "0",
+        "D": "3"
+      },
+      "answer": "B",
+      "elo": 1530,
+      "topic": ["Complex Numbers", "Roots of Equations", "Polynomials"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 31,
+      "text": "If $\\alpha$ denotes the number of solutions of $|1-i|^x=2^x$ and $\\beta = (\\frac{|z|}{arg(z)})$ where $z=\\frac{\\pi}{4}(1+i)^{4}(\\frac{1-\\sqrt{\\pi i}}{\\sqrt{\\pi+i}}+\\frac{\\sqrt{\\pi}-i}{1+\\sqrt{\\pi i}})$, $i=\\sqrt{-1},$ then the distance of the point ($\\alpha, \\beta$) from the line $4x-3y=7$ is",
+      "type": "SA",
+      "answer": "3",
+      "elo": 1780,
+      "topic": ["Complex Numbers", "Equations", "Coordinate Geometry"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 32,
+      "text": "Let $z_{1}$ and $z_{2}$ be two complex number such that $z_{1}+z_{2}=5$ and $z_{1}^{3}+{z_{2}}^{3}=20+15i$. Then $|z_{1}^{4}+z_{2}^{4}|$ equals-",
+      "type": "MCQ",
+      "options": {
+        "A": "$30\\sqrt{3}$",
+        "B": "75",
+        "C": "$15\\sqrt{15}$",
+        "D": "$25\\sqrt{3}$"
+      },
+      "answer": "B",
+      "elo": 1630,
+      "topic": ["Complex Numbers", "Algebraic Identities"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 33,
+      "text": "Let $\\alpha, \\beta \\in N$ be roots of equation $x^{2}-70x+\\lambda=0$, where $\\lambda/2, \\lambda/3 \\notin N$. If $\\alpha$ assumes the minimum possible value, then $\\frac{(\\sqrt{\\alpha-1}+\\sqrt{\\beta-1})(\\lambda+35)}{|\\alpha-\\beta|}$ is equal to:",
+      "type": "SA",
+      "answer": "60",
+      "elo": 1770,
+      "topic": ["Quadratic Equations", "Roots of Equations", "Number Theory"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 34,
+      "text": "The number of real solutions of the equation $x(|x|^{2}+3|x|+5|x-1|+6|x-2|)=0$ is",
+      "type": "SA",
+      "answer": "1",
+      "elo": 1120,
+      "topic": ["Equations", "Absolute Value"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Easy"
+    },
+    {
+      "q_id": 35,
+      "text": "Let S be the set of positive integral values of a for which $\\frac{ax^{2}+2(a+1)x+9a+4}{x^{2}-8x+32}<0, \\forall x\\in R$. Then, the number of elements in S is:",
+      "type": "MCQ",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "$\\infty$",
+        "D": "3"
+      },
+      "answer": "B",
+      "elo": 1420,
+      "topic": ["Quadratic Equations", "Inequalities"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 36,
+      "text": "For $0<c<b<a,$ let $(a+b-2c)x^{2}+(b+c-2a)x+(c+a-2b)=0$ and $\\alpha\\ne1$ be one of its root. Then, among the two statements\n(I) If $\\alpha\\in(-1,0)$, then b cannot be the geometric mean of a and c\n(II) If $\\alpha\\in(0,1),$ then b may be the geometric mean of a and c",
+      "type": "MCQ",
+      "options": {
+        "A": "Both (I) and (II) are true",
+        "B": "Neither (I) nor (II) is true",
+        "C": "Only (II) is true",
+        "D": "Only (I) is true"
+      },
+      "answer": "A",
+      "elo": 1790,
+      "topic": ["Quadratic Equations", "Roots of Equations", "Inequalities"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 37,
+      "text": "The number of solutions, of the equation $e^{sin~x}-2e^{-sin~x}=2$ is",
+      "type": "MCQ",
+      "options": {
+        "A": "2",
+        "B": "more than 2",
+        "C": "1",
+        "D": "0"
+      },
+      "answer": "D",
+      "elo": 1360,
+      "topic": ["Trigonometric Equations", "Exponential Equations"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 38,
+      "text": "Let a,b,c be the length of three sides of a triangle satisfying the condition $(a^{2}+b^{2})x^{2}-2b(a+c)x+(b^{2}+c^{2})=0$. If the set of all possible values of x is the interval ($\\alpha, \\beta$), then $12(\\alpha^{2}+\\beta^{2})$ is equal to",
+      "type": "SA",
+      "answer": "36",
+      "elo": 1800,
+      "topic": ["Quadratic Equations", "Properties of Triangles", "Inequalities"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 39,
+      "text": "Let $S=\\{z\\in C:|z-1|=1$ and $(\\sqrt{2}-1)(z+\\overline{z})-i(z-\\overline{z})=2\\sqrt{2}\\}$. Let $z_{1}, z_{2}\\in S$ be such that $|z_{1}|=max_{z\\in S}|z|$ and $|z_{2}|=min_{z\\in S}|z|$. Then $|\\sqrt{2}z_{1}-z_{2}|^{2}$ equals:",
+      "type": "MCQ",
+      "options": {
+        "A": "1",
+        "B": "4",
+        "C": "3",
+        "D": "2"
+      },
+      "answer": "D",
+      "elo": 1780,
+      "topic": ["Complex Numbers", "Locus", "Circles", "Modulus"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 40,
+      "text": "Let $P=\\{z\\in C:|z+2-3i|\\le1\\}$ and $Q=\\{z\\in C:z(1+i)+\\overline{z}(1-i)\\le-8\\}$. Let in $P\\cap Q$, $|z-3+2i|$ be maximum and minimum at $z_{1}$ and $z_{2}$ respectively. If $|z_{1}|^{2}+2|z_{2}|^{2}=\\alpha+\\beta\\sqrt{2}$ where $\\alpha, \\beta$ are integers, then $\\alpha+\\beta$ equals",
+      "type": "SA",
+      "answer": "36",
+      "elo": 1800,
+      "topic": ["Complex Numbers", "Locus", "Circles", "Inequalities", "Modulus"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 41,
+      "text": "If z is a complex number such that $|z|\\ge1$, then the minimum value of $|z+\\frac{1}{2}(3+4i)|$ is:",
+      "type": "MCQ",
+      "options": {
+        "A": "5/2",
+        "B": "2",
+        "C": "3/2",
+        "D": "None of above"
+      },
+      "answer": "D",
+      "elo": 1380,
+      "topic": ["Complex Numbers", "Modulus", "Inequalities"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 42,
+      "text": "Let $S=\\{x\\in R:(\\sqrt{3}+\\sqrt{2})^{x}+(\\sqrt{3}-\\sqrt{2})^{x}=10\\}$. Then the number of elements in S is:",
+      "type": "MCQ",
+      "options": {
+        "A": "4",
+        "B": "0",
+        "C": "2",
+        "D": "1"
+      },
+      "answer": "C",
+      "elo": 1390,
+      "topic": ["Equations", "Exponents"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 43,
+      "text": "Let $\\alpha$ and $\\beta$ be the roots of the equation $px^{2}+qx-r=0$ where $p\\ne0$. If p,q and r be the consecutive terms of a non-constant G.P and $1/\\alpha+1/\\beta=3/4,$ then the value of $(\\alpha-\\beta)^{2}$ is:",
+      "type": "MCQ",
+      "options": {
+        "A": "80/9",
+        "B": "9",
+        "C": "20/3",
+        "D": "8"
+      },
+      "answer": "A",
+      "elo": 1540,
+      "topic": ["Quadratic Equations", "Roots of Equations", "Geometric Progression"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 44,
+      "text": "Let $p, q\\in\\mathbb{R}$ and $(1-\\sqrt{3}i)^{200}=2^{199}(p+iq),$ $i=\\sqrt{-1}$. Then $p+q+q^{2}$ and $p-q+q^{2}$ are roots of the equation.",
+      "type": "MCQ",
+      "options": {
+        "A": "$x^{2}+4x-1=0$",
+        "B": "$x^{2}-4x+1=0$",
+        "C": "$x^{2}+4x+1=0$",
+        "D": "$x^{2}-4x-1=0$"
+      },
+      "answer": "B",
+      "elo": 1590,
+      "topic": ["Complex Numbers", "De Moivre's Theorem", "Quadratic Equations"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 45,
+      "text": "The value of $(\\frac{1+sin\\frac{2\\pi}{9}+icos\\frac{2\\pi}{9}}{1+sin\\frac{2\\pi}{9}-icos\\frac{2\\pi}{9}})^{3}$ is",
+      "type": "MCQ",
+      "options": {
+        "A": "$\\frac{-1}{2}(1-i\\sqrt{3})$",
+        "B": "$\\frac{1}{2}(1-i\\sqrt{3})$",
+        "C": "$\\frac{-1}{2}(\\sqrt{3}-i)$",
+        "D": "$\\frac{1}{2}(\\sqrt{3}+i)$"
+      },
+      "answer": "C",
+      "elo": 1520,
+      "topic": ["Complex Numbers", "De Moivre's Theorem", "Trigonometry"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 46,
+      "text": "Let $z_{1}=2+3i$ and $z_{2}=3+4i$. The set $S=\\{z\\in C:|z-z_{1}|^{2}-|z-z_{2}|^{2}=|z_{1}-z_{2}|^{2}\\}$ represents a",
+      "type": "MCQ",
+      "options": {
+        "A": "straight line with sum of its intercepts on the coordinate axes equals 14",
+        "B": "hyperbola with the length of the transverse axis 7",
+        "C": "straight line with the sum of its intercepts on the coordinate axes equals -18",
+        "D": "hyperbola with eccentricity 2"
+      },
+      "answer": "A",
+      "elo": 1330,
+      "topic": ["Complex Numbers", "Locus"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 47,
+      "text": "Let z be a complex number such that $z\\ne-i$ and $|\\frac{z-2i}{z+i}|=2$. Then z lies on the circle of radius 2 and centre",
+      "type": "MCQ",
+      "options": {
+        "A": "(2, 0)",
+        "B": "(0, 0)",
+        "C": "(0, 2)",
+        "D": "(0,-2)"
+      },
+      "answer": "D",
+      "elo": 1210,
+      "topic": ["Complex Numbers", "Locus", "Circles"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 48,
+      "text": "For two non-zero complex number $z_{1}$ and $Z_{2}$ if $Re(z_{1}z_{2})=0$ and $Re(z_{1}+z_{2})=0,$ then which of the following are possible ?\n(A) $Im(z_{1})>0$ and $Im(z_{2})>0$\n(B) $Im(z_{1})<0$ and $Im(z_{2})>0$\n(C) $Im(z_{1})>0$ and $Im(z_{2})<0$\n(D) $Im(z_{1})<0$ and $Im(z_{2})<0$\nChoose the correct answer from the options given below :",
+      "type": "MCQ",
+      "options": {
+        "A": "B and D",
+        "B": "B and C",
+        "C": "A and B",
+        "D": "A and C"
+      },
+      "answer": "B",
+      "elo": 1430,
+      "topic": ["Complex Numbers", "Properties of Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Medium"
+    },
+    {
+      "q_id": 49,
+      "text": "Let $\\alpha=8-14i,$ $A=\\{z\\in C:\\frac{\\alpha z-\\overline{\\alpha}\\overline{z}}{z^{2}-(\\overline{z})^{2}-112i}=1\\}$ and $B=\\{z\\in C:|z+3i|=4\\}$. Then $\\sum_{z\\in A\\cap B}(Re z - Im z)$ is equal to",
+      "type": "SA",
+      "answer": "14",
+      "elo": 1790,
+      "topic": ["Complex Numbers", "Locus", "Circles", "Properties of Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    },
+    {
+      "q_id": 50,
+      "text": "Let $z=1+i$ and $z_{1}=\\frac{1+i\\overline{z}}{\\overline{z}(1-z)+\\frac{1}{z}}.$ Then $\\frac{12}{\\pi}arg(z_{1})$ is equal to",
+      "type": "SA",
+      "answer": "9",
+      "elo": 1500,
+      "topic": ["Complex Numbers", "Argument", "Properties of Complex Numbers"],
+      "subject": "Mathematics",
+      "difficulty_initial": "Hard"
+    }
+  ]
