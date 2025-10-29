@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examples - Quantum Numbers</title>
+    <link rel="stylesheet" href="style.css"> <script> MathJax = { tex: { inlineMath: [['$', '$']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html">Missions</a>
+        <a href="theory.html">Theory</a>
+        <a href="video.html">Video</a>
+        <a href="examples.html" class="active">Examples</a>
+    </div>
+
+    <div class="container chapter-container">
+        <a href="index.html" class="back-btn">← Back to Missions</a>
+        <h1 class="title">Example Problems: Quantum Numbers</h1>
+        <p class="subtitle">Practice assigning electron addresses!</p>
+
+        <div class="example-card">
+            <h2>⭐ Example 1: Possible 'l' values</h2>
+            <p><b>Q:</b> If the principal quantum number $n = 4$, what are the possible values for the azimuthal quantum number $l$?</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                The value of $l$ ranges from $0$ to $(n-1)$.<br>
+                For $n=4$, the possible $l$ values are $\mathbf{0, 1, 2, 3}$. (These correspond to s, p, d, and f subshells).
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h2>⭐ Example 2: Possible 'm_l' values</h2>
+            <p><b>Q:</b> If the azimuthal quantum number $l = 2$ (a d subshell), what are the possible values for the magnetic quantum number $m_l$?</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                The value of $m_l$ ranges from $-l$ to $+l$, including 0.<br>
+                For $l=2$, the possible $m_l$ values are $\mathbf{-2, -1, 0, +1, +2}$. (This confirms there are 5 d orbitals).
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h2>⭐ Example 3: Identifying Invalid Sets</h2>
+            <p><b>Q:</b> Which of the following sets of quantum numbers ($n, l, m_l, m_s$) is NOT allowed for an electron in an atom?</p>
+            <p>a) (3, 2, -1, +1/2) &nbsp;&nbsp; b) (2, 2, 0, -1/2) &nbsp;&nbsp; c) (4, 0, 0, +1/2) &nbsp;&nbsp; d) (1, 0, 0, -1/2)</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Rule: $l$ must be less than $n$ ($l = 0, ..., n-1$).<br>
+                In option (b), $n=2$ but $l=2$. Since $l$ cannot be equal to $n$, set (b) is **not allowed**.
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="theory.html" class="nav-btn">⬅ Theory</a>
+            <a href="../4-configurations/index.html" class="nav-btn">Next Level ➡</a>
+        </div>
+    </div>
+</body>
+</html>

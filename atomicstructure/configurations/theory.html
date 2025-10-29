@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theory - Configurations</title>
+    <link rel="stylesheet" href="style.css" />
+    <script> MathJax = { tex: { inlineMath: [['$', '$']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html">Missions</a>
+        <a href="theory.html" class="active">Theory</a>
+        <a href="video.html">Video</a>
+        <a href="examples.html">Examples</a>
+    </div>
+
+    <div class="container">
+        <h1>⚛️ Filling of Orbitals & Electronic Configuration</h1>
+
+        <div class="dr-neutron">
+            <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+            <p>Now that we know the 'rooms' (orbitals), how do electrons decide where to go? There are rules!</p>
+        </div>
+
+        <div class="level-box">
+            <h2>🧩 Concept 1: Aufbau Principle</h2>
+            <p>In the ground state of an atom or ion, electrons fill atomic orbitals starting from the lowest available energy levels before occupying higher levels. The general order of filling is based on the $(n+l)$ rule (lower $n+l$ fills first; if $n+l$ is the same, lower $n$ fills first): $1s \rightarrow 2s \rightarrow 2p \rightarrow 3s \rightarrow 3p \rightarrow 4s \rightarrow 3d \rightarrow 4p \rightarrow 5s \rightarrow 4d \rightarrow ...$</p>
+            
+
+[Image of Aufbau principle diagram]
+
+             <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>Think of it as filling seats in a stadium – gotta fill the best seats (lowest energy) first!</p>
+            </div>
+        </div>
+
+        <div class="level-box">
+            <h2>⚔️ Concept 2: Pauli Exclusion Principle</h2>
+            <p>No two electrons in the same atom can have the same set of all four quantum numbers ($n, l, m_l, m_s$). This implies that each orbital (defined by $n, l, m_l$) can hold a maximum of **two electrons**, and these two electrons must have opposite spins ($m_s = +1/2$ and $m_s = -1/2$).</p>
+             <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>No identical twins allowed in the same orbital address! They must have opposite spins.</p>
+            </div>
+        </div>
+
+        <div class="level-box">
+            <h2>🧗 Concept 3: Hund's Rule of Maximum Multiplicity</h2>
+            <p>When filling degenerate orbitals (orbitals of the same energy, like the three $p$ orbitals or five $d$ orbitals), electrons are placed individually into each orbital with parallel spins ($\uparrow$) before any orbital is doubly occupied ($\uparrow\downarrow$). This pairing occurs only after all orbitals in the subshell have at least one electron. This configuration minimizes electron-electron repulsion and maximizes total spin, leading to lower energy (greater stability).</p>
+             <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>Electrons prefer their own space! They spread out in equal-energy orbitals before pairing up.</p>
+            </div>
+        </div>
+
+        <div class="level-box">
+            <h2>🧙‍♂️ Concept 4: Electronic Configurations & Stability</h2>
+            <p>By applying these three rules, we can determine the electronic configuration of any atom or ion, showing how electrons are distributed among orbitals (e.g., Oxygen Z=8: $1s^2 2s^2 2p^4$). Configurations can be written using orbital notation (like $2p^4$) or orbital diagrams (boxes/circles with arrows). Atoms gain special stability when they have completely filled subshells (e.g., $p^6, d^{10}, f^{14}$) or exactly half-filled subshells (e.g., $p^3, d^5, f^7$). This extra stability explains why Chromium (Cr, Z=24) is $[Ar] 4s^1 3d^5$ instead of $4s^2 3d^4$, and Copper (Cu, Z=29) is $[Ar] 4s^1 3d^{10}$ instead of $4s^2 3d^9$.</p>
+        </div>
+
+
+        <a href="index.html" class="back-link">← Back to Missions</a>
+
+    </div> </body>
+</html>

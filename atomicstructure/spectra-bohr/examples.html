@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examples - Spectra & Bohr</title>
+    <link rel="stylesheet" href="style.css"> <script> MathJax = { tex: { inlineMath: [['$', '$']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html">Missions</a>
+        <a href="theory.html">Theory</a>
+        <a href="video.html">Video</a>
+        <a href="examples.html" class="active">Examples</a>
+    </div>
+
+    <div class="container chapter-container">
+        <a href="index.html" class="back-btn">← Back to Missions</a>
+        <h1 class="title">Example Problems: Spectra & Bohr</h1>
+        <p class="subtitle">Practice Bohr model calculations!</p>
+
+        <div class="example-card">
+            <h2>⭐ Example 1: Bohr Radius Calculation</h2>
+            <p><b>Q:</b> Calculate the radius of the 3rd orbit (n=3) for a He⁺ ion (Z=2). ($a_0 = 0.529$ Å)</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Use Bohr radius formula: $r_n = \frac{n^2}{Z} \times a_0$<br>
+                $r_3 = \frac{3^2}{2} \times 0.529 \text{ Å} = \frac{9}{2} \times 0.529 \text{ Å}$<br>
+                $r_3 = 4.5 \times 0.529 \text{ Å} = \mathbf{2.3805 \text{ Å}}$
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h2>⭐ Example 2: Energy Level Calculation</h2>
+            <p><b>Q:</b> Calculate the energy (in eV) of an electron in the n=2 state of a Li²⁺ ion (Z=3). ($E_0 = 13.6$ eV)</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Use Bohr energy formula: $E_n = -E_0 \frac{Z^2}{n^2}$<br>
+                $E_2 = -13.6 \text{ eV} \times \frac{3^2}{2^2} = -13.6 \text{ eV} \times \frac{9}{4}$<br>
+                $E_2 = -13.6 \times 2.25 \text{ eV} = \mathbf{-30.6 \text{ eV}}$
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h2>⭐ Example 3: Spectral Line Wavelength (Rydberg)</h2>
+            <p><b>Q:</b> Find the wavelength ($\lambda$) of the photon emitted when an electron in a Hydrogen atom (Z=1) transitions from n=3 to n=2 (Balmer series). ($R_H = 1.097 \times 10^7 \text{ m}^{-1}$)</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Use Rydberg formula: $\frac{1}{\lambda} = R_H Z^2 \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)$<br>
+                Here $n_1=2$, $n_2=3$, $Z=1$.<br>
+                $\frac{1}{\lambda} = (1.097 \times 10^7 \text{ m}^{-1}) (1^2) \left( \frac{1}{2^2} - \frac{1}{3^2} \right)$<br>
+                $\frac{1}{\lambda} = (1.097 \times 10^7) \left( \frac{1}{4} - \frac{1}{9} \right) = (1.097 \times 10^7) \left( \frac{9-4}{36} \right)$<br>
+                $\frac{1}{\lambda} = (1.097 \times 10^7) \left( \frac{5}{36} \right) \approx 1.5236 \times 10^6 \text{ m}^{-1}$<br>
+                $\lambda = \frac{1}{1.5236 \times 10^6} \approx 6.56 \times 10^{-7} \text{ m} = \mathbf{656 \text{ nm}}$ (This is the red H-alpha line!)
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="theory.html" class="nav-btn">⬅ Theory</a>
+            <a href="../atomic-structure.html" class="nav-btn">Chapter Complete 🎉</a>
+        </div>
+    </div>
+</body>
+</html>

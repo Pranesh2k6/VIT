@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theory - Quantum Numbers</title>
+    <link rel="stylesheet" href="style.css" />
+    <script> MathJax = { tex: { inlineMath: [['$', '$']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html">Missions</a>
+        <a href="theory.html" class="active">Theory</a>
+        <a href="video.html">Video</a>
+        <a href="examples.html">Examples</a>
+    </div>
+
+    <div class="container">
+        <h1>⚛️ Quantum Numbers & Orbitals</h1>
+
+        <div class="dr-neutron">
+            <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+            <p>Bohr's orbits weren't quite right. Electrons live in fuzzy 'orbitals' described by quantum numbers!</p>
+        </div>
+
+        <div class="level-box">
+            <h2>🧩 Concept 1: Schrödinger Equation & Orbitals</h2>
+            <p>The modern description of the electron comes from the Schrödinger Wave Equation. We don't solve it in JEE, but its solutions ($\psi$, wave functions) describe regions of space around the nucleus where there is a high probability (often 90%) of finding an electron. These probability regions are called **atomic orbitals**.</p>
+        </div>
+
+        <div class="level-box">
+            <h2>⚔️ Concept 2: The Four Quantum Numbers</h2>
+            <p>Four quantum numbers act like an "address" specifying the state of an electron:</p>
+            <ul>
+                <li><b>Principal (n):</b> Defines the main **energy level** or shell. $n = 1, 2, 3, ...$. Higher $n$ means higher energy and generally further from the nucleus.</li>
+                <li><b>Azimuthal/Angular Momentum (l):</b> Defines the **shape** of the orbital and the subshell. $l = 0, 1, 2, ..., (n-1)$.
+                    <ul>
+                        <li>$l=0 \rightarrow$ s orbital (Spherical)</li>
+                        <li>$l=1 \rightarrow$ p orbital (Dumbbell)</li>
+                        <li>$l=2 \rightarrow$ d orbital (Complex shapes)</li>
+                        <li>$l=3 \rightarrow$ f orbital (Even more complex)</li>
+                    </ul>
+                </li>
+                <li><b>Magnetic (m or m_l):</b> Defines the **orientation** of the orbital in space within a subshell. $m_l = -l, -l+1, ..., 0, ..., +l-1, +l$. The number of possible $m_l$ values ($2l+1$) tells you how many orbitals are in that subshell (e.g., one s orbital, three p orbitals, five d orbitals).</li>
+                <li><b>Spin (s or m_s):</b> Defines the intrinsic angular momentum or **spin** of the electron. It can only have two values: $m_s = +1/2$ (spin up $\uparrow$) or $m_s = -1/2$ (spin down $\downarrow$).</li>
+            </ul>
+             <div class="dr-neutron">
+                <img src="https://i.ibb.co/31yTQvB/drneutron.png" alt="Dr Neutron">
+                <p>Shell (n) $\rightarrow$ Subshell (l) $\rightarrow$ Orbital (m_l) $\rightarrow$ Spin (m_s)! That's the electron's full cosmic address!</p>
+            </div>
+        </div>
+
+        <div class="level-box">
+            <h2>🧗 Concept 3: Orbital Shapes & Nodes</h2>
+            <p>Visualizing the probability regions gives us shapes:</p>
+             
+            <ul>
+                <li><b>s orbitals ($l=0$):</b> Spherical.</li>
+                <li><b>p orbitals ($l=1$):</b> Dumbbell-shaped along the x, y, and z axes ($p_x, p_y, p_z$).</li>
+                <li><b>d orbitals ($l=2$):</b> Mostly cloverleaf shapes ($d_{xy}, d_{yz}, d_{zx}, d_{x^2-y^2}$) plus one dumbbell with a torus ($d_{z^2}$).</li>
+            </ul>
+            <p>A **node** is a region where the probability of finding the electron is zero. There are **radial nodes** (spheres at certain distances from the nucleus, number = $n-l-1$) and **angular nodes** (planes or cones passing through the nucleus, number = $l$).</p>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Missions</a>
+
+    </div> </body>
+</html>

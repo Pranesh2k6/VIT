@@ -39,7 +39,7 @@ function ChatWindow({ onClose, messages, onSendMessage }) {
           onChange={(e) => setInput(e.target.value)}
           placeholder="Ask Dr. Neutron..."
         />
-        <button type="submit">Send</button>
+        <button type="submit" aria-label="Send message">➤</button>
       </form>
     </div>
   );

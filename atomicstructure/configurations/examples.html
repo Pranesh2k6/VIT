@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examples - Configurations</title>
+    <link rel="stylesheet" href="style.css"> <script> MathJax = { tex: { inlineMath: [['$', '$']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html">Missions</a>
+        <a href="theory.html">Theory</a>
+        <a href="video.html">Video</a>
+        <a href="examples.html" class="active">Examples</a>
+    </div>
+
+    <div class="container chapter-container">
+        <a href="index.html" class="back-btn">← Back to Missions</a>
+        <h1 class="title">Example Problems: Configurations</h1>
+        <p class="subtitle">Practice filling those electron shells!</p>
+
+        <div class="example-card">
+            <h2>⭐ Example 1: Writing Configuration</h2>
+            <p><b>Q:</b> Write the ground state electronic configuration for Phosphorus (P, Z=15).</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Order of filling: 1s, 2s, 2p, 3s, 3p...<br>
+                Fill with 15 electrons respecting Pauli and Hund:<br>
+                $1s^2$ (2 e⁻) $\rightarrow$ $2s^2$ (4 e⁻) $\rightarrow$ $2p^6$ (10 e⁻) $\rightarrow$ $3s^2$ (12 e⁻) $\rightarrow$ $3p^3$ (15 e⁻).<br>
+                Configuration: $\mathbf{1s^2 2s^2 2p^6 3s^2 3p^3}$ (or [Ne] 3s² 3p³)
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h2>⭐ Example 2: Hund's Rule Application</h2>
+            <p><b>Q:</b> How many unpaired electrons are present in a neutral Nitrogen atom (N, Z=7)?</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Configuration: $1s^2 2s^2 2p^3$.<br>
+                The $1s$ and $2s$ orbitals are filled ($\uparrow\downarrow$).<br>
+                According to Hund's rule, the 3 electrons in the $2p$ subshell occupy the three degenerate $p$ orbitals singly with parallel spins ($\uparrow$ $\uparrow$ $\uparrow$).<br>
+                Therefore, there are $\mathbf{3}$ unpaired electrons.
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h2>⭐ Example 3: Exception Configuration</h2>
+            <p><b>Q:</b> Write the ground state electronic configuration for Copper (Cu, Z=29), noting the exception.</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Expected (Aufbau): $[Ar] 4s^2 3d^9$.<br>
+                Actual (Exception): To achieve a more stable fully-filled d subshell, one electron moves from 4s to 3d.<br>
+                Configuration: $\mathbf{[Ar] 4s^1 3d^{10}}$
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="theory.html" class="nav-btn">⬅ Theory</a>
+            <a href="../5-spectra-bohr-revisited/index.html" class="nav-btn">Next Level ➡</a>
+        </div>
+    </div>
+</body>
+</html>

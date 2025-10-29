@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examples - Quantum Realm</title>
+    <link rel="stylesheet" href="style.css"> <script> MathJax = { tex: { inlineMath: [['$', '$']] } }; </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html">Missions</a>
+        <a href="theory.html">Theory</a>
+        <a href="video.html">Video</a>
+        <a href="examples.html" class="active">Examples</a>
+    </div>
+
+    <div class="container chapter-container">
+        <a href="index.html" class="back-btn">← Back to Missions</a>
+        <h1 class="title">Example Problems: Quantum Realm</h1>
+        <p class="subtitle">Practice with Planck, Bohr, and de Broglie!</p>
+
+        <div class="example-card">
+            <h2>⭐ Example 1: Planck's Equation</h2>
+            <p><b>Q:</b> Calculate the energy (in Joules) of a photon of green light with a frequency ($\nu$) of $6.0 \times 10^{14}$ Hz. (Planck's constant $h = 6.626 \times 10^{-34}$ J·s)</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Use Planck's equation: $E = h\nu$<br>
+                $E = (6.626 \times 10^{-34} \text{ J·s}) \times (6.0 \times 10^{14} \text{ Hz})$<br>
+                $E = 3.9756 \times 10^{-19} \text{ J} \approx \mathbf{3.98 \times 10^{-19} J}$
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h2>⭐ Example 2: Bohr Model Energy Levels</h2>
+            <p><b>Q:</b> What is the energy (in eV) required to excite an electron in a hydrogen atom from the ground state (n=1) to the first excited state (n=2)? (Energy of ground state = -13.6 eV)</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Energy formula: $E_n = -13.6 \frac{Z^2}{n^2}$ eV. For Hydrogen, Z=1.<br>
+                $E_1 = -13.6 \frac{1^2}{1^2} = -13.6$ eV<br>
+                $E_2 = -13.6 \frac{1^2}{2^2} = -13.6 / 4 = -3.4$ eV<br>
+                Energy required = $\Delta E = E_{final} - E_{initial} = E_2 - E_1$<br>
+                $\Delta E = (-3.4 \text{ eV}) - (-13.6 \text{ eV}) = \mathbf{10.2 \text{ eV}}$
+            </div>
+        </div>
+
+        <div class="example-card">
+            <h2>⭐ Example 3: de Broglie Wavelength</h2>
+            <p><b>Q:</b> Calculate the de Broglie wavelength ($\lambda$) of an electron (mass $m_e = 9.1 \times 10^{-31}$ kg) moving at a velocity ($v$) of $1.0 \times 10^6$ m/s. ($h = 6.626 \times 10^{-34}$ J·s)</p>
+            <div class="solution-box">
+                ✅ <b>Solution:</b><br>
+                Use de Broglie's equation: $\lambda = \frac{h}{p} = \frac{h}{mv}$<br>
+                $\lambda = \frac{6.626 \times 10^{-34} \text{ J·s}}{(9.1 \times 10^{-31} \text{ kg}) \times (1.0 \times 10^6 \text{ m/s})}$<br>
+                $\lambda \approx 7.28 \times 10^{-10} \text{ m}$ (or 0.728 nm or 7.28 Å)
+            </div>
+        </div>
+
+
+        <div class="nav-buttons">
+            <a href="theory.html" class="nav-btn">⬅ Theory</a>
+            <a href="../3-quantum-numbers/index.html" class="nav-btn">Next Level ➡</a>
+        </div>
+    </div>
+</body>
+</html>
